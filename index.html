@@ -243,7 +243,152 @@ button.active {
 
     </div>
 
+
+<!-- Container for filter, volume, and slider -->
+<div class="controls-container">
+  <!-- Filter options -->
+  <div class="filter-options">
+    <label><input type="radio" name="song-filter" value="all" checked> Show All</label>
+    <label><input type="radio" name="song-filter" value="E"> E songs</label>
+    <label><input type="radio" name="song-filter" value="M"> M songs</label>
+  </div>
+  
+  <!-- Volume control -->
+ <div class="volume-control" style="display: flex; align-items: flex-start;">
+<img src="volume.png" alt="Volume" title="Volume" style="cursor: pointer; width: 25px; height: auto; margin-top: 10px;">
+   <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" style="width: 100px; margin-left: 5px; margin-top: 22px;">
+</div>
+  
+  <!-- Song seek slider -->
+<div class="song-slider-control" style="display: flex; align-items: center; margin-top: 10px;">
+ <img src="notes.png" alt="Seek" title="Seek" style="width: 30px; height: auto; margin-right: 5px; cursor: pointer; margin-top: -15px; margin-left: -5px;">
+  <input type="range" id="song-slider" value="0" min="0" max="100" step="1" style="width: 200px; margin-left: -3px; margin-top: -15px;">
+</div>
+</div>
+
+
+
+
+
+
+
     <audio id="audio" src="Brad Paisley - She's Everything (Lyrics).mp3"></audio>
+
+
+<style>
+   #song-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 4px; /* base height, can adjust */
+  }
+
+  /* WebKit browsers (Chrome, Safari, Edge) */
+  #song-slider::-webkit-slider-runnable-track {
+    background: #4CAF50; /* Track color */
+    height: 4px; /* Track height */
+    border-radius: 2px;
+  }
+  #song-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 12px; /* Thumb size */
+    width: 12px;
+    background: #ff0000; /* Thumb color */
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -4px; /* Align thumb vertically with track */
+  }
+
+  /* Firefox */
+  #song-slider::-moz-range-track {
+    background: #4CAF50; /* Track color */
+    height: 4px;
+    border-radius: 2px;
+  }
+  #song-slider::-moz-range-thumb {
+    height: 12px;
+    width: 12px;
+    background: #ff0000; /* Thumb color */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  /* IE / Edge legacy */
+  #song-slider::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    height: 4px;
+  }
+  #song-slider::-ms-thumb {
+    height: 12px;
+    width: 12px;
+    background: #ff0000; /* Thumb color */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+
+ /* WebKit browsers (Chrome, Safari, Edge) */
+#volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 200px; /* your slider width */
+  height: 4px; /* fallback height */
+}
+#volume-slider::-webkit-slider-runnable-track {
+  height: 4px; /* thinner track */
+  background: #4CAF50; /* your track color */
+  border-radius: 2px;
+}
+#volume-slider::-webkit-slider-thumb {
+  height: 12px; /* smaller thumb */
+  width: 12px;
+  margin-top: -4px; /* centers thumb vertically over the track */
+  background: #333; /* thumb color */
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-appearance: none; /* remove default */
+  appearance: none;
+}
+
+/* Firefox */
+#volume-slider::-moz-range-track {
+  height: 4px; /* thinner track */
+  background: #4CAF50; /* your track color */
+  border-radius: 2px;
+}
+#volume-slider::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  background: #333; /* thumb color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* IE / Edge legacy */
+#volume-slider::-ms-track {
+  height: 4px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+#volume-slider::-ms-thumb {
+  height: 12px;
+  width: 12px;
+  background: #333; /* thumb color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+</style>
+
+
+
+
+
+
+
 
     <style>
         body {
@@ -340,78 +485,78 @@ button:hover {
 
      <script>
         const songs = [
-            { title: "1. Talk Talk", artist: "TALK TALK", src: "Talk Talk - TALK TALK - 1982.mp3", category: "E" },
-            { title: "2. Turn around look at me", artist: "E", src: "Turn around look at me Glenn Campbell Cover By_ Ehllen Quezada.mp3", category: "E" },
-           { title: "3. I Want to Know What Love Is", artist: "", src: "I Want to Know What Love Is.mp3", category: "E" },
-           { title: "4. Clumsy", artist: "change boy to girl lyrics", src: "Fergie - Clumsy (Lyrics).mp3", category: "E" },
-           { title: "5. Exist For Love", artist: "AURORA", src: "AURORA - Exist For Love (Lyric Video).mp3", category: "E" },
-           { title: "6. Top 3 Covers", artist: "Elle", src: "I'll stand by youI've never been to meInsensitive- short cover by Ehllen Quezada.mp3", category: "L" },
-           { title: "7. Until You", artist: "Shayne Ward", src: "Shayne Ward - Until You (Official Lyric Video).mp3", category: "L" },
-          { title: "8. The One", artist: "Kodaline", src: "Kodaline - The One (Live at Ocean Way).mp3", category: "L" },
-          { title: "9. 99 Red balloons", artist: "NENA", src: "NENA 99 Red Balloons [1984] (Official HD Music Video).mp3" },
-          { title: "10. I'm all about you", artist: "Elle", src: "I'm all about you- (lyrics) cover by ehllen quezada.mp3" },
-          { title: "11. Just the same", artist: "Bruno Major", src: "bruno major - just the same (lyrics) unofficial.mp3" },
-          { title: "12. Wonder", artist: "Alfred Garcia", src: "Alfred García - Wonder ft. Pavvla.mp3" },
-          { title: "13. I Follow Rivers", artist: "Lykke Li", src: "Lykke Li - I Follow Rivers (Lyrics).mp3" },
-          { title: "14. After the moment", artist: "Craft Spells", src: "Craft Spells - After The Moment (Lyrics) [ ezmp3.cc ].mp3" },
-          { title: "15. At Home", artist: "Crystal Fighters", src: "Crystal Fighters - At Home Lyrics.mp3" },
-          { title: "16. A 1000 Times", artist: "Hamilton Rostam", src: "A 1000 Times by Hamilton Rostam (Lyrics) (mp3cut.net).mp3" },
-          { title: "17. Photograph", artist: "Ed Sheeran", src: "Ed Sheeran - Photograph (Lyrics).mp3" },
-          { title: "18. A Thousand Years", artist: "Christina Perri", src: "Christina Perri - A Thousand Years (Lyrics).mp3" },
-          { title: "19. Arms", artist: "Christina Perri", src: "Arms - Christina Perri (Lyrics).mp3" },
-          { title: "20. Landslide", artist: "Fleetwood Mac", src: "Landslide (2018 Remaster) [ ezmp3.co ].mp3" },
-          { title: "21. Right here waiting", artist: "Richard Marx", src: "Right Here Waiting - Richard Marx (Lyrics) [ ezmp3.co ].mp3" },
-          { title: "22. Waiting for you", artist: "Jo Hyun Ah", src: "Waiting for You (Waiting for You) [ ezmp3.co ].mp3" },
-          { title: "23. Sad heart", artist: "Seo Young", src: "SE O (Im Seo Young) – Sad Heart (아련한 마음) Reunited Worlds OST [ ezmp3.cc ].mp3" },
-          { title: "24. Little by little", artist: "Cheeze", src: "CHEEZE (치즈) - Little By Little (너라서 고마워) It's Okay To Not Be Okay OST Part 6 Lyrics가사 [HanRomEng].mp3" },
-          { title: "25. Lighting Up Your World", artist: "Janet Suhh", src: "[Lyrics Video] Janet Suhh(자넷서) - Lighting Up Your World.mp3" },
-          { title: "26. Burn", artist: "Tina Arena", src: "Burn (Acoustic).mp3" },
-          { title: "27. Shoot The Moon", artist: "Norah Jones", src: "Shoot The Moon.mp3" },
-          { title: "28. All Good Things Come To An End", artist: "", src: "Nelly Furtado- All Good Things Come To An End with lyrics on screen.mp3" },
-          { title: "29. Say It Right", artist: "Nelly Furtado", src: "Nelly Furtado - Say It Right [Lyrics].mp3" },
-          { title: "30. Tried to Tell You", artist: "Brett", src: "The Weather Station - Tried to Tell You (Lyrics).mp3" },
-          { title: "31. With Me", artist: "Sum 41", src: "Sum 41 - With Me ( LYRICS ).mp3" },
-          { title: "32. Thunder", artist: "Boys Like Girls", src: "Boys Like Girls - Thunder (Lyrics).mp3" },
-          { title: "33. If you're on the water", artist: "Saxaphones", src: "The Saxophones - If You're On The Water  Lyrics.mp3" },
-          { title: "34. Beyond love", artist: "Beach house", src: "Beach House - Beyond Love (lyrics).mp3" },
-          { title: "35. Deep", artist: "Binocular", src: "Deep - Binocular.mp3" },
-          { title: "36. Iris", artist: "Goo Goo Dolls", src: "Goo Goo Dolls - Iris (Lyrics).mp3" },
-          { title: "37. Stay", artist: "Lisa Loeb", src: "Stay (I missed You) - Lisa Loeb (Lyrics).mp3" },
-          { title: "38. November Rain", artist: "Dimas Senopati", src: "Guns N Roses - November Rain (Acoustic Cover).mp3" },
-         { title: "39.  A girl like you", artist: "Edwyn Collins", src: "Edwyn Collins A girl like you Lyrics.mp3" },
-         { title: "40.  Suspicious Minds", artist: "Elvis Presley", src: "Elvis Presley - Suspicious Minds (Lyrics).mp3" },
-        { title: "41.  Hungry Heart", artist: "Bruce Springsteen", src: "Bruce SpringsteenHungry Heart lyrics.mp3" },
-        { title: "42.  Life Is A Rock", artist: "Reunion", src: "Life Is A Rock (But The Radio Rolled Me) BEST LYRICS- Reunion 1974 (1).mp3" },
-        { title: "43.  High", artist: "Lighthouse Family", src: "Lighthouse Family- High with lyrics.mp3" },
-        { title: "44.  I'm Feeling You", artist: "Santana", src: "I'm Feeling You Santana-Feat  Michelle Branch Lyrics.mp3" },
-        { title: "45.  Just Remember I Love You", artist: "Firewall", src: "Just Remember I Love You.mp3" },
-        { title: "46.  Total Eclipse of the Heart", artist: "Bonnie", src: "Bonnie Tyler - Total Eclipse of the Heart (Long Version) [Audio].mp3" },
-        { title: "47.  If I Sing You A Love Song", artist: "Bonnie", src: "If I Sing You A Love Song - Bonnie Tyler (Lyrics).mp3" },
-        { title: "48.  A Groovy kind of Love", artist: "", src: "A Groovy kind of Love - Phil Collins.mp3" },
-        { title: "49.  Just As I Am", artist: "Air supply", src: "Just As I Am (Remastered).mp3" },
-        { title: "50.  Sometimes Love Just Ain't Enough", artist: "", src: "Sometimes Love Just Ain't Enough  Patty Smyth (Lyrics).mp3" },
-        { title: "51.  Vulnerable", artist: "Roxette ", src: "Vulnerable Roxette (Lyrics).mp3" },
-        { title: "52.  I Never Told You", artist: "Colbie Caillat", src: "Colbie Caillat - I Never Told You (Lyrics).mp3" },
-        { title: "53.  Someone You Loved", artist: "Lewis Capaldi", src: "Lewis Capaldi - Someone You Loved (Lyrics).mp3" },
-        { title: "54.   Thunder", artist: "Imagine Dragons", src: "Imagine Dragons - Thunder (Lyrics).mp3" },
-        { title: "55.   Far away", artist: "Nickelback", src: "Nickelback - Far away lyrics (extended version).mp3" },
-        { title: "56.   Battle", artist: "Colbie Caillat", src: "Battle - Colbie Caillat (lyrics).mp3" },
-        { title: "57.   I'd Really Love To See You Tonight", artist: "", src: "I'd Really Love To See You Tonight - England Dan & John Ford Coley (Lyrics).mp3" },
-        { title: "58.   Buko", artist: "Jireh Lim", src: "Buko (The Cozy Cove Live Sessions) - Jireh Lim.mp3" },
-        { title: "59.   Magkabilang Mundo", artist: "Jireh Lim", src: "Magkabilang Mundo (The Cozy Cove Live Sessions) - Jireh Lim.mp3" },
-        { title: "60.   NOBELA", artist: "Ehllen Quezada", src: "NOBELA  Join The Club  Cover By_  Ehllen Quezada.mp3" },
-        { title: "61.   Ang awit natin", artist: "Ehllen Quezada", src: "Ang awit natin  Janine Teñoso  Cover By_  Ehllen Quezada.mp3" },
-        { title: "62.   241", artist: "Ehllen Quezada", src: "241 RIVERMAYA Cover By_ Ehllen Quezada (mp3cut.net).mp3" },
-        { title: "63.   Bleeding Love", artist: "Leona Lewis", src: "Leona Lewis - Bleeding Love (Lyrics).mp3" },
-        { title: "64.   No One", artist: "Alicia Keys", src: "Alicia Keys - No One.mp3" },
-        { title: "65.   Just The Way You Are", artist: "", src: "Bruno Mars - Just The Way You Are (Lyrics).mp3" },
-        { title: "66.   Songbird", artist: "Barbra Streisand", src: "Songbird (lyrics) - Barbra Streisand (1).mp3" },
-        { title: "67.   Drive", artist: "The Cars", src: "The Cars - Drive (Lyrics).mp3" },
-        { title: "68.   Turn Around, Look At Me", artist: "", src: "Turn Around, Look At Me.mp3" },
-        { title: "69.   The Captain of Her Heart, Look At Me", artist: "", src: "The Captain of Her Heart (Radio Version).mp3" },
-        { title: "70.   Insensitive", artist: "Jann Arden", src: "Jann Arden - Insensitive with Lyrics.mp3" },
-        { title: "71.   until the end of the night", artist: "L", src: "until the end of the night.mp3" },
-        { title: "72.   One Last Song", artist: "A1", src: "A1 - One Last Song (Lyrics)🎶 [ ezmp3.cc ].mp3" },
+           { id: "E", title: "1. Talk Talk", artist: "TALK TALK", src: "Talk Talk - TALK TALK - 1982.mp3" },
+           { id: "E", title: "2. Turn around look at me", artist: "E", src: "Turn around look at me Glenn Campbell Cover By_ Ehllen Quezada.mp3" },
+           { id: "E", title: "3. I Want to Know What Love Is", artist: "", src: "I Want to Know What Love Is.mp3" },
+           { id: "E", title: "4. Clumsy", artist: "change boy to girl lyrics", src: "Fergie - Clumsy (Lyrics).mp3" },
+           { id: "E", title: "5. Exist For Love", artist: "AURORA", src: "AURORA - Exist For Love (Lyric Video).mp3" },
+           { id: "E", title: "6. Top 3 Covers", artist: "Elle", src: "I'll stand by youI've never been to meInsensitive- short cover by Ehllen Quezada.mp3" },
+           { id: "E", title: "7. Until You", artist: "Shayne Ward", src: "Shayne Ward - Until You (Official Lyric Video).mp3" },
+           { id: "E", title: "8. The One", artist: "Kodaline", src: "Kodaline - The One (Live at Ocean Way).mp3" },
+           { id: "E", title: "9. 99 Red balloons", artist: "NENA", src: "NENA 99 Red Balloons [1984] (Official HD Music Video).mp3" },
+           { id: "E", title: "10. I'm all about you", artist: "Elle", src: "I'm all about you- (lyrics) cover by ehllen quezada.mp3" },
+           { id: "E", title: "11. Just the same", artist: "Bruno Major", src: "bruno major - just the same (lyrics) unofficial.mp3" },
+           { id: "E", title: "12. Wonder", artist: "Alfred Garcia", src: "Alfred García - Wonder ft. Pavvla.mp3" },
+           { id: "E", title: "13. I Follow Rivers", artist: "Lykke Li", src: "Lykke Li - I Follow Rivers (Lyrics).mp3" },
+           { id: "E", title: "14. After the moment", artist: "Craft Spells", src: "Craft Spells - After The Moment (Lyrics) [ ezmp3.cc ].mp3" },
+           { id: "E", title: "15. At Home", artist: "Crystal Fighters", src: "Crystal Fighters - At Home Lyrics.mp3" },
+           { id: "E", title: "16. A 1000 Times", artist: "Hamilton Rostam", src: "A 1000 Times by Hamilton Rostam (Lyrics) (mp3cut.net).mp3" },
+           { id: "E", title: "17. Photograph", artist: "Ed Sheeran", src: "Ed Sheeran - Photograph (Lyrics).mp3" },
+           { id: "L", title: "18. A Thousand Years", artist: "Christina Perri", src: "Christina Perri - A Thousand Years (Lyrics).mp3" },
+           { id: "E", title: "19. Arms", artist: "Christina Perri", src: "Arms - Christina Perri (Lyrics).mp3" },
+           { id: "E", title: "20. Landslide", artist: "Fleetwood Mac", src: "Landslide (2018 Remaster) [ ezmp3.co ].mp3" },
+           { id: "E", title: "21. Right here waiting", artist: "Richard Marx", src: "Right Here Waiting - Richard Marx (Lyrics) [ ezmp3.co ].mp3" },
+           { id: "E", title: "22. Waiting for you", artist: "Jo Hyun Ah", src: "Waiting for You (Waiting for You) [ ezmp3.co ].mp3" },
+           { id: "E", title: "23. Sad heart", artist: "Seo Young", src: "SE O (Im Seo Young) – Sad Heart (아련한 마음) Reunited Worlds OST [ ezmp3.cc ].mp3" },
+           { id: "E", title: "24. Little by little", artist: "Cheeze", src: "CHEEZE (치즈) - Little By Little (너라서 고마워) It's Okay To Not Be Okay OST Part 6 Lyrics가사 [HanRomEng].mp3" },
+           { id: "E", title: "25. Lighting Up Your World", artist: "Janet Suhh", src: "[Lyrics Video] Janet Suhh(자넷서) - Lighting Up Your World.mp3" },
+           { id: "E", title: "26. Burn", artist: "Tina Arena", src: "Burn (Acoustic).mp3" },
+           { id: "E", title: "27. Shoot The Moon", artist: "Norah Jones", src: "Shoot The Moon.mp3" },
+           { id: "E", title:. All Good Things Come To An End", artist: "", src: "Nelly Furtado- All Good Things Come To An End with lyrics on screen.mp3" },
+           { id: "E", title: "29. Say It Right", artist: "Nelly Furtado", src: "Nelly Furtado - Say It Right [Lyrics].mp3" },
+           { id: "E", title: "30. Tried to Tell You", artist: "Brett", src: "The Weather Station - Tried to Tell You (Lyrics).mp3" },
+           { id: "E", title: "31. With Me", artist: "Sum 41", src: "Sum 41 - With Me ( LYRICS ).mp3" },
+           { id: "E", title: "32. Thunder", artist: "Boys Like Girls", src: "Boys Like Girls - Thunder (Lyrics).mp3" },
+           { id: "E", title: "33. If you're on the water", artist: "Saxaphones", src: "The Saxophones - If You're On The Water  Lyrics.mp3" },
+           { id: "E", title: "34. Beyond love", artist: "Beach house", src: "Beach House - Beyond Love (lyrics).mp3" },
+           { id: "L", title: "35. Deep", artist: "Binocular", src: "Deep - Binocular.mp3" },
+           { id: "L", title: "36. Iris", artist: "Goo Goo Dolls", src: "Goo Goo Dolls - Iris (Lyrics).mp3" },
+           { id: "L", title: "37. Stay", artist: "Lisa Loeb", src: "Stay (I missed You) - Lisa Loeb (Lyrics).mp3" },
+           { id: "L", title: "38. November Rain", artist: "Dimas Senopati", src: "Guns N Roses - November Rain (Acoustic Cover).mp3" },
+           { id: "L", title: "39.  A girl like you", artist: "Edwyn Collins", src: "Edwyn Collins A girl like you Lyrics.mp3" },
+           { id: "L", title: "40.  Suspicious Minds", artist: "Elvis Presley", src: "Elvis Presley - Suspicious Minds (Lyrics).mp3" },
+           { id: "E", title: "41.  Hungry Heart", artist: "Bruce Springsteen", src: "Bruce SpringsteenHungry Heart lyrics.mp3" },
+           { id: "L", title: "42.  Life Is A Rock", artist: "Reunion", src: "Life Is A Rock (But The Radio Rolled Me) BEST LYRICS- Reunion 1974 (1).mp3" },
+           { id: "L", title: "43.  High", artist: "Lighthouse Family", src: "Lighthouse Family- High with lyrics.mp3" },
+           { id: "L", title: "44.  I'm Feeling You", artist: "Santana", src: "I'm Feeling You Santana-Feat  Michelle Branch Lyrics.mp3" },
+           { id: "L", title: "45.  Just Remember I Love You", artist: "Firewall", src: "Just Remember I Love You.mp3" },
+           { id: "L", title: "46.  Total Eclipse of the Heart", artist: "Bonnie", src: "Bonnie Tyler - Total Eclipse of the Heart (Long Version) [Audio].mp3" },
+           { id: "E", title: "47.  If I Sing You A Love Song", artist: "Bonnie", src: "If I Sing You A Love Song - Bonnie Tyler (Lyrics).mp3" },
+           { id: "L", title: "48.  A Groovy kind of Love", artist: "", src: "A Groovy kind of Love - Phil Collins.mp3" },
+           { id: "E", title: "49.  Just As I Am", artist: "Air supply", src: "Just As I Am (Remastered).mp3" },
+           { id: "E", title: "50.  Sometimes Love Just Ain't Enough", artist: "", src: "Sometimes Love Just Ain't Enough  Patty Smyth (Lyrics).mp3" },
+           { id: "E", title: "51.  Vulnerable", artist: "Roxette ", src: "Vulnerable Roxette (Lyrics).mp3" },
+           { id: "L", title: "52.  I Never Told You", artist: "Colbie Caillat", src: "Colbie Caillat - I Never Told You (Lyrics).mp3" },
+           { id: "E", title: "53.  Someone You Loved", artist: "Lewis Capaldi", src: "Lewis Capaldi - Someone You Loved (Lyrics).mp3" },
+           { id: "L", title: "54.   Thunder", artist: "Imagine Dragons", src: "Imagine Dragons - Thunder (Lyrics).mp3" },
+           { id: "L", title: "55.   Far away", artist: "Nickelback", src: "Nickelback - Far away lyrics (extended version).mp3" },
+           { id: "L", title: "56.   Battle", artist: "Colbie Caillat", src: "Battle - Colbie Caillat (lyrics).mp3" },
+           { id: "L", title: "57.   I'd Really Love To See You Tonight", artist: "", src: "I'd Really Love To See You Tonight - England Dan & John Ford Coley (Lyrics).mp3" },
+        { id: "L", title: "58.   Buko", artist: "Jireh Lim", src: "Buko (The Cozy Cove Live Sessions) - Jireh Lim.mp3" },
+        { id: "E", title: "59.   Magkabilang Mundo", artist: "Jireh Lim", src: "Magkabilang Mundo (The Cozy Cove Live Sessions) - Jireh Lim.mp3" },
+        { id: "E", title: "60.   NOBELA", artist: "Ehllen Quezada", src: "NOBELA  Join The Club  Cover By_  Ehllen Quezada.mp3" },
+        { id: "E", title: "61.   Ang awit natin", artist: "Ehllen Quezada", src: "Ang awit natin  Janine Teñoso  Cover By_  Ehllen Quezada.mp3" },
+        { id: "E", title: "62.   241", artist: "Ehllen Quezada", src: "241 RIVERMAYA Cover By_ Ehllen Quezada (mp3cut.net).mp3" },
+        { id: "L", title: "63.   Bleeding Love", artist: "Leona Lewis", src: "Leona Lewis - Bleeding Love (Lyrics).mp3" },
+        { id: "L", title: "64.   No One", artist: "Alicia Keys", src: "Alicia Keys - No One.mp3" },
+        { id: "L", title: "65.   Just The Way You Are", artist: "", src: "Bruno Mars - Just The Way You Are (Lyrics).mp3" },
+        { id: "L", title: "66.   Songbird", artist: "Barbra Streisand", src: "Songbird (lyrics) - Barbra Streisand (1).mp3" },
+        { id: "L", title: "67.   Drive", artist: "The Cars", src: "The Cars - Drive (Lyrics).mp3" },
+        { id: "L", title: "68.   Turn Around, Look At Me", artist: "", src: "Turn Around, Look At Me.mp3" },
+        { id: "L", title: "69.   The Captain of Her Heart, Look At Me", artist: "", src: "The Captain of Her Heart (Radio Version).mp3" },
+        { id: "L", title: "70.   Insensitive", artist: "Jann Arden", src: "Jann Arden - Insensitive with Lyrics.mp3" },
+        { id: "L", title: "71.   until the end of the night", artist: "L", src: "until the end of the night.mp3" },
+        { id: "E", title: "72.   One Last Song", artist: "A1", src: "A1 - One Last Song (Lyrics)🎶 [ ezmp3.cc ].mp3" },
 
 
 
@@ -435,124 +580,171 @@ button:hover {
 
         ];
 
-     let currentSongIndex = 0;
+      let currentSongIndex = 0;
+    let isAutoplayEnabled = false;
+    let filteredSongs = []; // Array to hold the currently filtered songs
 
-let isAutoplayEnabled = false; // Variable to track autoplay status
+    const audio = document.getElementById('audio');
+    const songTitle = document.getElementById('song-title');
+    const songSelect = document.getElementById('song-select');
+    const filterRadios = document.querySelectorAll('input[name="song-filter"]');
 
-const audio = document.getElementById('audio');
-
-const songTitle = document.getElementById('song-title');
-
-
-function updateSong() {
-
-    audio.src = songs[currentSongIndex].src;
-
-    songTitle.textContent = `${songs[currentSongIndex].title} - ${songs[currentSongIndex].artist}`;
-
-    audio.load(); // Load the new song
-
-}
-
-
-// Play button
-
-document.getElementById('play-btn').addEventListener('click', () => {
-
-    audio.play();
-
-});
-
-
-// Pause button
-
-document.getElementById('pause-btn').addEventListener('click', () => {
-
-    audio.pause();
-
-});
-
-
-// Stop button
-
-document.getElementById('stop-btn').addEventListener('click', () => {
-
-    audio.pause();
-
-    audio.currentTime = 0;
-
-});
-
-
-// Next button
-
-document.getElementById('next-btn').addEventListener('click', () => {
-
-    currentSongIndex = (currentSongIndex + 1) % songs.length; // Loop back to the first song
-
-    updateSong();
-
-    audio.play(); // Automatically play the next song
-
-});
-
-
-// Previous button
-
-document.getElementById('prev-btn').addEventListener('click', () => {
-
-    currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length; // Loop back to the last song
-
-    updateSong();
-
-    audio.play(); // Automatically play the previous song
-
-});
-
-
-// Autoplay button
-
-document.getElementById('autoplay-btn').addEventListener('click', () => {
-
-    isAutoplayEnabled = !isAutoplayEnabled; // Toggle autoplay status
-
-    document.getElementById('autoplay-btn').textContent = isAutoplayEnabled ? '🔁 Autoplay On' : '🔁 Autoplay Off'; // Update button text
-
-});
-
-
-// Event listener for when the song ends
-
-audio.addEventListener('ended', () => {
-
-    if (isAutoplayEnabled) {
-
-        currentSongIndex = (currentSongIndex + 1) % songs.length; // Move to the next song
-
-        updateSong();
-
-        audio.play(); // Automatically play the next song
-
+    // Function to populate the dropdown based on the filtered songs
+    function populateSongSelect(songsToDisplay) {
+        songSelect.innerHTML = ''; // Clear existing options
+        songsToDisplay.forEach((song, index) => {
+            const option = document.createElement('option');
+            option.value = index; // Use the index in the *filtered* array
+            option.textContent = `${song.title}`; // Display the song title
+            songSelect.appendChild(option);
+        });
     }
 
-});
+    // Function to filter songs based on the selected radio button
+    function filterSongs(filterValue) {
+        if (filterValue === 'all') {
+            filteredSongs = songs;
+        } else {
+            filteredSongs = songs.filter(song => song.id === filterValue);
+        }
+        populateSongSelect(filteredSongs);
+        // After filtering, if the current song is no longer in the filtered list,
+        // reset to the first song in the filtered list.
+        const currentSongInFiltered = filteredSongs.find(song => song.src === audio.src);
+        if (!currentSongInFiltered && filteredSongs.length > 0) {
+             currentSongIndex = 0; // Reset index to the first song in the filtered list
+             updateSong(); // Update the displayed song and audio source
+        } else if (currentSongInFiltered) {
+            // Update the currentSongIndex to match the index in the filtered list
+            currentSongIndex = filteredSongs.indexOf(currentSongInFiltered);
+        } else {
+             // If no songs match the filter, clear the current song
+             currentSongIndex = -1; // Indicate no song is selected
+             songTitle.textContent = "No songs match filter";
+             audio.src = ""; // Clear audio source
+        }
+    }
 
+    function updateSong() {
+        if (currentSongIndex >= 0 && currentSongIndex < filteredSongs.length) {
+            const currentSong = filteredSongs[currentSongIndex];
+            audio.src = currentSong.src;
+            songTitle.textContent = `${currentSong.title} - ${currentSong.artist}`;
+            audio.load(); // Load the new song
+            // Update the dropdown to show the currently playing song
+            songSelect.value = currentSongIndex;
+        } else {
+            songTitle.textContent = "No song selected";
+            audio.src = "";
+        }
+    }
 
-// Initialize the first song
+    // Play button
+    document.getElementById('play-btn').addEventListener('click', () => {
+        if (audio.src) { // Only play if there's a source
+            audio.play();
+        }
+    });
 
-updateSong();
-    </script>
+    // Pause button
+    document.getElementById('pause-btn').addEventListener('click', () => {
+        audio.pause();
+    });
 
+    // Stop button
+    document.getElementById('stop-btn').addEventListener('click', () => {
+        audio.pause();
+        audio.currentTime = 0;
+    });
 
+    // Next button
+    document.getElementById('next-btn').addEventListener('click', () => {
+        if (filteredSongs.length > 0) {
+            currentSongIndex = (currentSongIndex + 1) % filteredSongs.length;
+            updateSong();
+            audio.play();
+        }
+    });
 
+    // Previous button
+    document.getElementById('prev-btn').addEventListener('click', () => {
+        if (filteredSongs.length > 0) {
+            currentSongIndex = (currentSongIndex - 1 + filteredSongs.length) % filteredSongs.length;
+            updateSong();
+            audio.play();
+        }
+    });
 
+    // Autoplay button
+    document.getElementById('autoplay-btn').addEventListener('click', () => {
+        isAutoplayEnabled = !isAutoplayEnabled;
+        document.getElementById('autoplay-btn').textContent = isAutoplayEnabled ? '🔁 Autoplay On' : '🔁 Autoplay Off';
+    });
+
+    // Event listener for when the song ends
+    audio.addEventListener('ended', () => {
+        if (isAutoplayEnabled && filteredSongs.length > 0) {
+            currentSongIndex = (currentSongIndex + 1) % filteredSongs.length;
+            updateSong();
+            audio.play();
+        }
+    });
+
+    // Event listener for the song select dropdown
+    songSelect.addEventListener('change', function() {
+        currentSongIndex = parseInt(this.value); // Get the index from the filtered list
+        updateSong(); // Update the song display and audio source
+        audio.play(); // Automatically play the selected song
+    });
+
+    // Add event listeners to the filter radio buttons
+    filterRadios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            filterSongs(this.value);
+            // After filtering, update the displayed song to the first in the new list
+            if (filteredSongs.length > 0) {
+                 currentSongIndex = 0;
+                 updateSong();
+            } else {
+                 currentSongIndex = -1; // No songs in the filtered list
+                 updateSong(); // Clear the display
+            }
+        });
+    });
+
+    // Initialize the filtered songs and populate the dropdown on page load
+    filterSongs('all');
+    // Initialize the first song from the initially filtered list
+    if (filteredSongs.length > 0) {
+        updateSong();
+    }
+
+</script>
 
 
 <style>
 
+
+.filter-options {
+    /* You might need to experiment with position: relative; or absolute; */
+    position: fixed; /* Or absolute */
+    top: 450px; /* Adjust this value to be below the fixed jump-to-song */
+    left: 50px; /* Align horizontally with jump-to-song if needed */
+    color: white;
+    z-index: 5; /* Ensure it's below jump-to-song if needed */
+}
+
+.filter-options label {
+    margin-right: 15px;
+    font-size: 10px;
+}
+
+.jump-to-song select {
+    width: 240px; 
+}
 .jump-to-song {
-    top: 360px; /* Increase space above the dropdown to move it down */
-    left: 20px; /* Move it to the right corner (adjust this value to move it right) */
+    top: 420px; /* Increase space above the dropdown to move it down */
+    left: 50px; /* Move it to the right corner (adjust this value to move it right) */
     text-align: left; /* Align the dropdown to the left */
     z-index: 10; /* Ensure it appears above other elements */
     position: fixed;
@@ -565,6 +757,14 @@ updateSong();
 }
 
 </style>
+
+
+
+
+
+
+
+
 <script>
 document.getElementById('song-select').addEventListener('change', function() {
     currentSongIndex = parseInt(this.value); // Get the selected song index
@@ -573,6 +773,10 @@ document.getElementById('song-select').addEventListener('change', function() {
 });
 
 </script>
+
+
+
+
 
 
 
