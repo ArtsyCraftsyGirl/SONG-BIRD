@@ -986,7 +986,7 @@ button:hover {
 </div>
 
 <script>
-    const poems = [
+    const poemsAA = [
         "What if my love isn't a soft whisper of 'I love you'?",
         "What if I just hold my tongue, letting silence speak true?",
         "What if my love isn't buying you lavish flowers,",
@@ -1012,7 +1012,7 @@ button:hover {
         "Would you dare to dive in?",
         "And measure the depths within?",
         "WHEN SILENCE SPEAKS TO YOU",
-         "A poem written by: Ehllen Quezada"
+         "A poem written by: Ehllen Quezada",
 
 
     ];
@@ -1021,13 +1021,13 @@ button:hover {
 
     function showPoem() {
         const poemElement = document.getElementById('poem');
-        poemElement.innerHTML = poems[currentIndex];
+        poemElement.innerHTML = poemsAA[currentIndex];
 
       
     }
 
     function nextPoem() {
-        currentIndex = (currentIndex + 1) % poems.length;
+        currentIndex = (currentIndex + 1) % poemsAA.length;
         showPoem();
     }
 
@@ -1392,120 +1392,6 @@ and the playlist that's my songs and also some songs for you, guess and pick 1 s
 
 
 
-<!-- Poem Table -->
-<div id="poemTable" class="poem-table" style="display: none;">
-    <div class="table-content">
-        <span class="close" onclick="closePoemTable()" style="position: absolute; top: 2px; right: 15px; color: #aaa; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
-       <h2 id="poemTitle" style="color: #ca3c25;">THE NIGHT, I REMEMBERED WHO LIORA WAS</h2>
-<h4 style="color: #ca3c25;">Poem written by: Ehllen Quezada</h4>
-
-        <div id="poemText"></div>
-        <div class="navigation">
-            <div class="poem-prev" onclick="changePoem(-1)">Previous</div>
-            <div class="poem-next" onclick="changePoem(1)">Next</div>
-        </div>
-<div id="pageCount" style="margin-top:10px; font-weight:bold; text-align:center;"> </div>
-    </div>
-</div>
-
-<script>
-const poemsMisty = [
-    {
-        title: "WHEN SILENCE SPEAKS TO YOU",
-        text: [
-            "What if my love isn't a soft whisper of 'I love you'?",
-            "What if I just hold my tongue, letting silence speak true?",
-            "What if my love isn't buying you lavish flowers,",
-            "But singing you your favorite songs in the quiet hours?",
-            "",
-            "What if my love isn't always sweet like candies,",
-            "But has the depth of dark chocolate, rich and dandy?",
-            "What if my love is the painting on the wall,",
-            "Beautiful yet a mystery to all?",
-            "",
-            "What if my love is recalling little things about you?",
-            "What if my love is loving the people that you love, too?",
-            "What if my love is a quiet sigh of 'I miss you,",
-            "What if my love is gazing at your old photos each night and thinking of you?",
-            "",
-            "What if my love is a gift without strings,",
-            "Just your presence is enough, what a joy it brings?",
-            "What if my love is boundless,",
-            "What if my love is found in your happiness?",
-            "",
-            "What if my love isn't the air you need when you can't breathe,",
-            "But just the cool breeze every Christmas that brings you peace?",
-            "What if my love is the one you least expect?",
-            "Would you take a moment to reflect?",
-            "",
-            "What if my love is not just a pond,",
-            "But a deep ocean—",
-            "Would you dare to dive in?",
-            "And measure the depths within?",
-
-        ],
-        
-    }
-
-];
-
-let currentPoemIndex = 0;
-
-function openPoemTable() {
-    document.getElementById('poemTable').style.display = 'block'; // Show the table
-    showPoem(currentPoemIndex); // Show the first poem
-}
-
-function closePoemTable() {
-    document.getElementById('poemTable').style.display = 'none'; // Hide the table
-}
-
-function showPoem(index) {
-    const poemTitle = document.getElementById('poemTitle');
-    const poemText = document.getElementById('poemText');
-    
-    poemTitle.innerHTML = poemsMisty[index].title;
-    poemText.innerHTML = poemsMisty[index].text.join('<br>'); // Join lines with line breaks
-}
-
-function changePoem(direction) {
-    const poemText = document.getElementById('poemText');
-    const currentPoem = poems[currentPoemIndex];
-
-    // Fade out current poem
-    poemText.classList.add('fade-out');
-
-    setTimeout(() => {
-        currentPoemIndex += direction; // Update the index based on direction
-        if (currentPoemIndex < 0) {
-            currentPoemIndex = 0; // Prevent going below the first poem
-        } else if (currentPoemIndex >= poemsMisty.length) {
-            currentPoemIndex = poemsMisty.length - 1; // Prevent going above the last poem
-        }
-        showPoem(currentPoemIndex); // Show the updated poem
-        poemText.classList.remove('fade-out'); // Fade in new poem
-    }, 300); // Match this timeout with the CSS transition duration
-}
-
-
-
-function showPoem(index) {
-    const poemTitle = document.getElementById('poemTitle');
-    const poemText = document.getElementById('poemText');
-    const pageCount = document.getElementById('pageCount');
-
-    poemTitle.innerHTML = poemsMisty[index].title;
-    poemText.innerHTML = poemsMisty[index].text.join('<br>');
-
-    // Automatically calculate total pages and current page
-    const totalPages = poemsMisty.length;
-    const currentPage = index + 1;
-
-    // Display the page info
-    pageCount.innerHTML = `Page ${currentPage} of ${totalPages}`;
-}
-</script>
-
 <style>
 .poem-table {
     position: fixed;
@@ -1565,6 +1451,103 @@ function showPoem(index) {
 }
 </style>
 
+
+<!-- Poem Table -->
+<div id="poemTable" class="poem-table" style="display: none;">
+    <div class="table-content">
+        <span class="close" onclick="closePoemTable()" style="position: absolute; top: 2px; right: 15px; color: #aaa; font-size: 40px; font-weight: bold; cursor: pointer;">×</span>
+        <h2 id="poemTitle" style="color: #ca3c25;">THE NIGHT, I REMEMBERED WHO LIORA WAS</h2>
+        <h4 style="color: #ca3c25;">Poem written by: Ehllen Quezada</h4>
+        <div id="poemText"></div>
+        <div class="navigation">
+            <div class="poem-prev" onclick="changePoem(-1)">Previous</div>
+            <div class="poem-next" onclick="changePoem(1)">Next</div>
+        </div>
+        <div id="pageCount" style="margin-top:10px; font-weight:bold; text-align:center;"> </div>
+    </div>
+</div>
+
+<script>
+
+
+// Your poem array now named EhllenPoem
+const EhllenPoem = [
+    {
+        title: "WHEN SILENCE SPEAKS TO YOU",
+        text: [
+            "What if my love isn't a soft whisper of 'I love you'?",
+            "What if I just hold my tongue, letting silence speak true?",
+            "What if my love isn't buying you lavish flowers,",
+            "But singing you your favorite songs in the quiet hours?",
+            "",
+            "What if my love isn't always sweet like candies,",
+            "But has the depth of dark chocolate, rich and dandy?",
+            "What if my love is the painting on the wall,",
+            "Beautiful yet a mystery to all?",
+            "",
+            "What if my love is recalling little things about you?",
+            "What if my love is loving the people that you love, too?",
+            "What if my love is a quiet sigh of 'I miss you,'",
+            "What if my love is gazing at your old photos each night and thinking of you?",
+            "",
+            "What if my love is a gift without strings,",
+            "Just your presence is enough, what a joy it brings?",
+            "What if my love is boundless,",
+            "What if my love is found in your happiness?",
+            "",
+            "What if my love isn't the air you need when you can't breathe,",
+            "But just the cool breeze every Christmas that brings you peace?",
+            "What if my love is the one you least expect?",
+            "Would you take a moment to reflect?",
+            "",
+            "What if my love is not just a pond,",
+            "But a deep ocean—",
+            "Would you dare to dive in?",
+            "And measure the depths within?",
+        ],
+    }
+    // You can add more poems here if needed
+];
+
+// Replace 'poemsMisty' with 'EhllenPoem'
+let currentEhllenPoemIndex = 0;
+
+function openPoemTable() {
+    document.getElementById('poemTable').style.display = 'block'; // Show the table
+    showEhllenPoem(currentEhllenPoemIndex); // Show the first poem
+}
+
+function closePoemTable() {
+    document.getElementById('poemTable').style.display = 'none'; // Hide the table
+}
+
+// Show the current poem based on index
+function showEhllenPoem(index) {
+    const poemTitle = document.getElementById('poemTitle');
+    const poemText = document.getElementById('poemText');
+    const pageCount = document.getElementById('pageCount');
+
+    const currentPoem = EhllenPoem[index];
+    if (!currentPoem) return;
+
+    poemTitle.innerHTML = currentPoem.title;
+    poemText.innerHTML = currentPoem.text.join('<br>');
+
+    // Update page count info
+    const totalPages = EhllenPoem.length;
+    const currentPage = index + 1;
+    pageCount.innerHTML = `Page ${currentPage} of ${totalPages}`;
+}
+
+// Change poem index and show next/prev
+function changePoem(direction) {
+    currentEhllenPoemIndex += direction;
+    // Clamp index within valid range
+    if (currentEhllenPoemIndex < 0) currentEhllenPoemIndex = 0;
+    if (currentEhllenPoemIndex >= EhllenPoem.length) currentEhllenPoemIndex = EhllenPoem.length - 1;
+    showEhllenPoem(currentEhllenPoemIndex);
+}
+</script>
 
 
 
