@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Master's Page</title>
+    <title> SongBird</title>
  
-      <video autoplay loop muted class="background-video">
-        <source src="pole.mp4" type="video/mp4">
+   <video autoplay loop muted class="background-video">
+        <source src="longing.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
@@ -28,17 +28,23 @@
     transform: translate(-50%, -50%); /* Center the video */
 }
 
+
 h1 {
-    display: none; /* Hide the h1 element since we are using an image */
-}
-.image-title {
+    background-image: url('Alexis.png'); /* Set the background image */
+    background-size: contain; /* Scale the image to fit the element */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+    width: 380px; /* Set a width for the h1 element (adjust as needed) */
+    height: 150px; /* Set a height for the h1 element (adjust as needed) */
+    margin: 20px 0; /* Space above and below the title */
     position: fixed; 
-    top: 25px; /* Distance from the top of the viewport */
+    top: 10px; /* Distance from the top of the viewport */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust to center the title */
-    width: auto; /* Adjust width as needed */
-    height: 68px; /* Set height to match the original font size */
+    z-index: 10; /* Ensure it stays above other content */
+    text-align: center; /* Center the text inside the h1 */
 }
+
 
         .content {
             text-align: left; /* Align content to the left */
@@ -81,7 +87,7 @@ button.active {
     border-radius: 5px; /* Rounded corners */
     color: #ff0000; /* Neon red color */
     font-size: 24px; /* Font size */
-    font-family: calibri;
+    font-family: cursive;
     animation: neon 1.5s ease-in-out infinite alternate; /* Animation */
 }
 
@@ -113,17 +119,18 @@ button.active {
 </style>
 
 
-   <h1></h1> 
-<img src="paladin.png" alt="JB PALADIN" class="image-title" />
+
+<h1>
+</h1>
 
 
 
- <div class="animated-text">" It's okay not 
-<br> to be okay "</div> 
+ <div class="animated-text">" Love you to the
+<br> moon and back "</div> 
 
 <div class="container">
 
-    <h3>🎼 Master's Playlist</h3>
+    <h3> &#127911; ALexi's Playlist</h3>
     <div class="current-song">
         <h2 id="song-title">One Last Song - A1</h2>
     </div>
@@ -143,78 +150,93 @@ button.active {
  
 
    <div class="jump-to-song">
-         <label for="song-select">Jump to Song:</label>
-        <select id="song-select">
-            <option value="0">1. A poem for you</option>
-            <option value="1">2. The Road Not Taken</option>
-            <option value="2">3. Canon in D</option>
-            <option value="3">4. For The First Time</option>
-            <option value="4">5. Better be home soon</option>
-            <option value="5">6. Don't Dream It's Over</option>
-            <option value="6">7. THE BEST OF KAREN CARPENTER</option>
-            <option value="7">8. I'LL STAND BY YOU </option>
-            <option value="8">9. Maneater</option>
-            <option value="9">10. HURT</option>
-            <option value="10">11. Ordinary song</option>
-            <option value="11">12. Drops of Jupiter</option>
-            <option value="12">13. Stay Close, Don't Go</option>
-            <option value="13">14. Lose Control</option>
-            <option value="14">15. Say you won't let go</option>
-            <option value="15">16. When I Look At You </option>
-            <option value="16">17. One tin soldier</option>
-            <option value="17">18. Two Less Lonely People in the World</option>
-            <option value="18">19. Midnight City </option>
-            <option value="19">20. Yesterday</option>
-            <option value="20">21. How Deep Is Your Love </option>
-            <option value="21">22. Hotel California </option>
-            <option value="22">23. Stairway to Heaven </option>
-            <option value="23">24. Still Got the blues </option>
-            <option value="24">25. More than you know </option>
-            <option value="25">26. Sultan of Swings </option>
-            <option value="26">27. As the late as hour maybe </option>
-            <option value="27">28. A Man Without Love </option>
-            <option value="28">29. Be my baby </option>
-            <option value="29">30. The scientist </option>
-            <option value="30">31. The night we met </option>
-            <option value="31">32. Better be home soon (woman ver.) </option>
-            <option value="32">33. Starry starry night </option>
-            <option value="33">34. Shattered </option>
-            <option value="34">35. Starboy </option>
-            <option value="35">36. Chained to the rhythm </option>
-            <option value="36">37. On my own </option>
-            <option value="37">38. Shut up and dance with me </option>
-            <option value="38">39. Need you now </option>
-            <option value="39">40. Middle</option>
-            <option value="40">41. Gypsy </option>
-            <option value="41">42. Want To Want Me  </option>
-            <option value="42">43. CAN'T STOP THE FEELING </option>
-            <option value="43">44. Animals </option>
-            <option value="44">45. I Took A Pill In Ibiza </option>
-            <option value="45">46. Perfect </option>
-            <option value="46">47  Shake It Off </option>
-            <option value="47">48  Style </option>
-            <option value="48">49  Everybody wants to rule the world </option>
-            <option value="49">50  I won't back down </option>
-            <option value="50">51  Give Me Just A Little More Time </option>
-            <option value="51">52  Kylie Minogue - Give Me Just A Little More</option>
-            <option value="52">53  Count Me In (Remastered)</option>
-            <option value="53">54  She's Just My Style (Remastered)</option>
-            <option value="54">55  Lovesong (Remastered)</option>
-            <option value="55">56  Nobody Does It Better</option>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <label for="song-select">Jump to Song:</label>
+    <select id="song-select">
+        <option value="0">1. Talk Talk </option>
+        <option value="1">2. Turn around look at me </option>
+        <option value="2">3. I want to know what love is </option>
+        <option value="3">4. Clumsy</option>
+        <option value="4">5. Exist for love</option>
+        <option value="5">6. Top 3 Covers</option>
+        <option value="6">7. Until You</option>
+        <option value="7">8. The One</option>
+        <option value="8">9. 99 Red balloons </option>
+        <option value="9">10. I'm all about you </option>
+        <option value="10">11. Just the same </option>
+        <option value="11">12. Wonder </option>
+        <option value="12">13. I Follow Rivers </option>
+        <option value="13">14. After the moment </option>
+        <option value="14">15. At home </option>
+        <option value="15">16. A 1000 Times </option>
+        <option value="16">17. Photograph </option>
+        <option value="17">18. A Thousand Years </option>
+        <option value="18">19. Arms </option>
+        <option value="19">20. Landslide </option>
+        <option value="20">21. Right here waiting </option>
+        <option value="21">22. Waiting for you </option>
+        <option value="22">23. Sad heart </option>
+        <option value="23">24. Little by little </option>
+        <option value="24">25. Lighting up your world </option>
+        <option value="25">26. Burn </option>
+        <option value="26">27. Shoot to the moon </option>
+        <option value="27">28. All good things come to an end </option>
+        <option value="28">29. Say It Right </option>
+        <option value="29">30. Tried to tell you </option>
+        <option value="30">31. With me </option>
+        <option value="31">32. Thunder </option>
+        <option value="32">33. If you're on the water </option>
+        <option value="33">34. Beyond love </option>
+        <option value="34">35. Deep </option>
+        <option value="35">36. Iris </option>
+        <option value="36">37. Stay </option>
+        <option value="37">38. November rain </option>
+        <option value="38">39. A girl like you </option>
+        <option value="39">40. Suspicious minds</option>
+        <option value="40">41. Hungry heart</option>
+        <option value="41">42. Life is a rock </option>
+        <option value="42">43. High </option>
+        <option value="43">44. I'm feeling you</option>
+        <option value="44">45. Just Remember I Love You </option>
+        <option value="45">46. Total Eclipse of the Heart </option>
+        <option value="46">47. If I Sing You A Love Song </option>
+        <option value="47">48. A Groovy kind of Love </option>
+        <option value="48">49. Just as I am </option>
+        <option value="49">50. Sometimes Love Just Ain't Enough</option>
+        <option value="50">51. Vulnerable</option>
+        <option value="51">52. I never told you</option>
+        <option value="52">53. Somebody you loved</option>
+        <option value="53">54. Thunder </option>
+        <option value="54">55. Far away </option>
+        <option value="55">56. Battle </option>
+        <option value="56">57. I'd Really Love To See You </option>
+        <option value="57">58. Buko </option>
+        <option value="58">59. Magkabilang mundo </option>
+        <option value="59">60. Nobela </option>
+        <option value="60">61. Ang awit natin </option>
+        <option value="61">62. 241 </option>
+        <option value="62">63. Bleeding love </option>
+        <option value="63">64. No one </option>
+        <option value="64">65. Just the way you are </option>
+        <option value="65">66. Songbird </option>
+        <option value="66">67. Drive </option>
+        <option value="67">68. Turn around look at me </option>
+        <option value="68">69. Captain of her heart </option>
+        <option value="69">70. Insensitive </option>
+        <option value="70">71. Until the end of the night </option>
+        <option value="71">72. One last song </option>
+        <option value="72">73. Starboy </option>
+        <option value="73">74. Chained to the rhythm </option>
+        <option value="74">75. On my own </option>
+        <option value="75">76. Shut up and dance with me </option>
+        <option value="76">77. Need you now </option>
+        <option value="78">79. Middle</option>
+        <option value="79">80. Gypsy </option>
+        <option value="80">81. Want To Want Me  </option>
+        <option value="81">82. CAN'T STOP THE FEELING </option>
+        <option value="82">83. Animals </option>
+        <option value="83">84. I Took A Pill In Ibiza </option>
+        <option value="84">85. Perfect </option>
+        <option value="86">87  Shake It Off </option>
 
 
 
@@ -234,19 +256,19 @@ button.active {
   <div class="filter-options">
     <label><input type="radio" name="song-filter" value="all" checked> Show All</label>
     <label><input type="radio" name="song-filter" value="E"> E songs</label>
-    <label><input type="radio" name="song-filter" value="M"> M songs</label>
+    <label><input type="radio" name="song-filter" value="L"> L songs</label>
   </div>
   
   <!-- Volume control -->
  <div class="volume-control" style="display: flex; align-items: flex-start;">
-<img src="speaker.png" alt="Volume" title="Volume" style="cursor: pointer; width: 45px; height: auto; margin-top: -10px; margin-left: -10px;">
-   <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" style="width: 100px; margin-left: -5px; margin-top: 12px;">
+<img src="volume.png" alt="Volume" title="Volume" style="cursor: pointer; width: 25px; height: auto; margin-top: 10px;">
+   <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" style="width: 100px; margin-left: 5px; margin-top: 22px;">
 </div>
   
   <!-- Song seek slider -->
-<div class="song-slider-control" style="display: flex; align-items: center; margin-top: -20px;">
- <img src="musicnotes.png" alt="Seek" title="Seek" style="width: 30px; height: auto; margin-right: 5px; cursor: pointer; margin-bottom: 20px; margin-left: -5px;">
-  <input type="range" id="song-slider" value="0" min="0" max="100" step="1" style="width: 100px; margin-left: -3px; margin-top: -20px;">
+<div class="song-slider-control" style="display: flex; align-items: center; margin-top: 10px;">
+ <img src="notes.png" alt="Seek" title="Seek" style="width: 30px; height: auto; margin-right: 5px; cursor: pointer; margin-top: -15px; margin-left: -5px;">
+  <input type="range" id="song-slider" value="0" min="0" max="100" step="1" style="width: 100px; margin-left: -3px; margin-top: -15px;">
 </div>
 </div>
 
@@ -293,68 +315,101 @@ volumeSlider.addEventListener('input', () => {
 
 <script>
 const songs = [
-    { id: "E", title: "1. A poem for you", artist: "Ehllen Quezada", src: "A poem for you (mp3cut.net).mp3" },
-    { id: "E", title: "2. The Road Not Taken", artist: "Robert Frost", src: "The Road Not Taken, by Robert Frost (HD).mp3" },
-    { id: "E", title: "3. Canon in D", artist: "Brooklyn Duo", src: "Canon in D (Pachelbel's Canon) - Cello & Piano [BEST WEDDING VERSION].mp3" },
-    { id: "E", title: "4. For The First Time", artist: "Kenny Loggins", src: "Kenny Loggins - For The First Time (Official Video).mp3" },
-    { id: "E", title: "5. Better be home soon", artist: "Crowded House", src: "Better be home soon by Crowded House.mp3" },
-    { id: "E", title: "6. Don't Dream It's Over", artist: "Neil Finn", src: "Neil Finn - Don't Dream It's Over (live with strings, Auckland 2015).mp3" },
-    { id: "E", title: "7. CARPENTER SONGS", artist: "Ehllen Quezada", src: "THE BEST OF KAREN CARPENTER - Cover by Ehllen Quezada.mp3" },
-    { id: "E", title: "8. I'LL STAND BY YOU", artist: "Ehllen Quezada", src: "I'LL STAND BY YOU   LYRICS  THE PRETENDERS  Cover by_ Ehllen Quezada.mp3" },
-    { id: "E", title: "9. Maneater", artist: "Ehllen Quezada", src: "Maneater- No hard feelings OST Lyrics ( cover by ehllen quezada.mp3" },
-    { id: "E", title: "10. HURT", artist: "Johnny Cash", src: "johnny cash - hurt (lyrics).mp3" },
-    { id: "E", title: "11. Ordinary song", artist: "Ehllen Quezada", src: "Ordinary song-  Lyrics cover by ehllen quezada.mp3" },
-    { id: "E", title: "12. Drops of Jupiter", artist: "Train", src: "Train - Drops of Jupiter (Lyrics).mp3" },
-    { id: "E", title: "13. Stay Close, Don't Go", artist: "", src: "Stay Close, Don't Go - Secondhand Serenade - (Lyrics).mp3" },
-    { id: "E", title: "14. Lose Control", artist: "Teddy Swims", src: "Teddy Swims - Lose Control (Lyrics).mp3" },
-    { id: "E", title: "15. Say you won't let go", artist: "Ehllen Quezada", src: "82_s_0bca6532fbahweajy7odsnsfl5yaul5qo22a.f0 (mp3cut.net).mp3" },
-    { id: "E", title: "16. When I Look At You", artist: "Miley Cyrus", src: "When I Look At You - Miley Cyrus (Lyrics).mp3" },
-    { id: "M", title: "17. One tin soldier", artist: "Ehllen Quezada", src: "SongPeel-Reverb-Output (2).wav" },
-    { id: "E", title: "18. Two Less Lonely People in the World", artist: "", src: "Air Supply - Two Less Lonely People in the World (Lyrics).mp3" },
-    { id: "E", title: "19. Midnight City", artist: "M83", src: "M83 - Midnight City (Lyrics).mp3" },
-    { id: "E", title: "20. Yesterday", artist: "Beatles", src: "Yesterday (Remastered 2009).mp3" },
-    { id: "M", title: "21. How Deep Is Your Love", artist: "", src: "Bee Gees - How Deep Is Your Love [Lyrics].mp3" },
-    { id: "E", title: "22. Hotel California", artist: "Eagles", src: "Hotel California (2013 Remaster).mp3" },
-    { id: "E", title: "23. Stairway to Heaven", artist: "Led Zeppelin", src: "Stairway to Heaven (Remaster).mp3" },
-    { id: "E", title: "24. Still Got The Blues", artist: "Garry Moore", src: "Still Got The Blues.mp3" },
-    { id: "E", title: "25. More than you know", artist: "Garry Moore", src: "I Love You More Than You'll Ever Know.mp3" },
-    { id: "E", title: "26. Sultans of Swing", artist: "Dire Straits", src: "Dire Straits - Sultans of Swing lyrics.mp3" },
-    { id: "E", title: "27. As Late As The Hour May Be", artist: "", src: "As Late As The Hour May Be - Jimmy Radcliffe.mp3" },
-    { id: "E", title: "28. Man Without Love", artist: "Engelbert ", src: "A Man Without Love LYRICS Video Engelbert Humperdinck 1968  Moon Knight Episode 1.mp3" },
-    { id: "E", title: "29. Be My Baby", artist: "The Barberettes", src: "바버렛츠 The Barberettes - Be My Baby (Cover of The Ronettes) (mp3cut.net).mp3" },
-    { id: "E", title: "30. The Scientist", artist: "Coldplay", src: "@coldplay - The Scientist (Lyrics).mp3" },
-    { id: "E", title: "31. The Night We Met", artist: "Lord Huron", src: "Lord Huron - The Night We Met (Lyrics).mp3" },
-    { id: "E", title: "32. Better Be Home Soon", artist: "Andrea Zonn", src: "Better Be Home Soon (1).mp3" },
-    { id: "M", title: "33. Starry, Starry Night", artist: "Don McLean", src: "Don McLean - Vincent ( Starry, Starry Night) With Lyrics.mp3" },
-    { id: "M", title: "34. Shattered", artist: "OAR", src: "OAR - shattered (turn the car around).mp3" },
-    { id: "M", title: "35. Starboy", artist: "The Weeknd", src: "The Weeknd - Starboy (Lyrics) ft. Daft Punk.mp3" },
-    { id: "M", title: "36. Chained To The Rhythm", artist: "Katy Perry", src: "Katy Perry - Chained To The Rhythm (Lyrics) ft. Skip Marley.mp3" },
-    { id: "M", title: "37. On My Own", artist: "Patti LaBelle", src: "Patti LaBelle - On My Own ft. MICHAEL MCDONALD.mp3" },
-    { id: "M", title: "38. Shut Up and Dance", artist: "WALK THE MOON", src: "WALK THE MOON - Shut Up and Dance (Lyrics).mp3" },
-    { id: "M", title: "39. Need You Now", artist: "Lady Antebellum", src: "Need You Now.mp3" },
-    { id: "M", title: "40. Middle ", artist: "DJ Snake", src: "DJ Snake - Middle (Lyrics) ft. Bipolar Sunshine.mp3" },
-    { id: "M", title: "41. Gypsy ", artist: "Fleetwood Mac", src: "Gypsy.mp3" },
-    { id: "M", title: "42. Want To Want Me ", artist: "Jason Derulo", src: "(VietsubLyrics) Want To Want Me - Jason Derulo.mp3" },
-    { id: "M", title: "43. CAN'T STOP THE FEELIN ", artist: "Justin T", src: "Justin Timberlake - CAN'T STOP THE FEELING! (Lyrics).mp3" },
-    { id: "M", title: "44. Animals ", artist: "Maroon 5", src: "Maroon 5 - Animals (Lyrics).mp3" },
-    { id: "M", title: "45. I Took A Pill In Ibiza ", artist: "Mike Posner", src: "Mike Posner - I Took A Pill In Ibiza (SeeB Remix).mp3" },
-    { id: "M", title: "46. Perfect ", artist: "One Direction", src: "One Direction - Perfect (Audio).mp3" },
-    { id: "M", title: "47.  Shake It Off", artist: "Taylor Swift", src: "Shake It Off - Taylor Swift (Lyrics).mp3" },
-    { id: "M", title: "48.  Style", artist: "Taylor Swift", src: "Taylor Swift - Style (Taylor's Version).mp3" },
-    { id: "M", title: "49.  Everybody Wants To Rule The World", artist: "", src: "Everybody Wants To Rule The World.mp3" },
-    { id: "M", title: "50.  I Won't Back Down", artist: "Tom Petty", src: "Tom Petty- I Won't Back Down.mp3" },
-    { id: "M", title: "51.  Give Me Just A Little More Time", artist: "", src: "Give Me Just A Little More Time - The Chairmen of the Board.mp3" },
-    { id: "M", title: "52.  Give Me Little More Time", artist: "Kylie", src: "Kylie Minogue - Give Me Just A Little More Time (Remastered) [Audio HQ].mp3" },
-    { id: "M", title: "53.  Count Me In", artist: "Gary Lewis", src: "Count Me In (Remastered).mp3" },
-    { id: "M", title: "54.  She's Just My Style", artist: "Gary Lewis", src: "She's Just My Style (Remastered).mp3" },
-    { id: "M", title: "55.  Lovesong", artist: "The Cure", src: "Lovesong (Remastered).mp3" },
-    { id: "M", title: "55.  Nobody Does It Better", artist: "Carly Simon", src: "Carly Simon Nobody Does It Better HD  HQ.mp3" },
+    { id: "E", title: "1. Talk Talk", artist: "TALK TALK", src: "Talk Talk - TALK TALK - 1982.mp3" },
+    { id: "E", title: "2. Turn around look at me", artist: "Ellen Quezada", src: "Turn around look at me Glenn Campbell Cover By_ Ehllen Quezada.mp3" },
+    { id: "E", title: "3. I Want to Know What Love Is", artist: "", src: "I Want to Know What Love Is.mp3" },
+    { id: "E", title: "4. Clumsy", artist: "Fergie", src: "Fergie - Clumsy (Lyrics).mp3" },
+    { id: "E", title: "5. Exist For Love", artist: "AURORA", src: "AURORA - Exist For Love (Lyric Video).mp3" },
+    { id: "E", title: "6. Top 3 Covers", artist: "Elle", src: "I'll stand by youI've never been to meInsensitive- short cover by Ehllen Quezada.mp3" },
+    { id: "E", title: "7. Until You", artist: "Shayne Ward", src: "Shayne Ward - Until You (Official Lyric Video).mp3" },
+    { id: "E", title: "8. The One", artist: "Kodaline", src: "Kodaline - The One (Live at Ocean Way).mp3" },
+    { id: "E", title: "9. 99 Red balloons", artist: "NENA", src: "NENA 99 Red Balloons [1984] (Official HD Music Video).mp3" },
+    { id: "E", title: "10. I'm all about you", artist: "Elle", src: "I'm all about you- (lyrics) cover by ehllen quezada.mp3" },
+    { id: "E", title: "11. Just the same", artist: "Bruno Major", src: "bruno major - just the same (lyrics) unofficial.mp3" },
+    { id: "E", title: "12. Wonder", artist: "Alfred Garcia", src: "Alfred García - Wonder ft. Pavvla.mp3" },
+    { id: "E", title: "13. I Follow Rivers", artist: "Lykke Li", src: "Lykke Li - I Follow Rivers (Lyrics).mp3" },
+    { id: "E", title: "14. After the moment", artist: "Craft Spells", src: "Craft Spells - After The Moment (Lyrics) [ ezmp3.cc ].mp3" },
+    { id: "E", title: "15. At Home", artist: "Crystal Fighters", src: "Crystal Fighters - At Home Lyrics.mp3" },
+    { id: "E", title: "16. A 1000 Times", artist: "Hamilton Rostam", src: "A 1000 Times by Hamilton Rostam (Lyrics) (mp3cut.net).mp3" },
+    { id: "E", title: "17. Photograph", artist: "Ed Sheeran", src: "Ed Sheeran - Photograph (Lyrics).mp3" },
+    { id: "L", title: "18. A Thousand Years", artist: "Christina Perri", src: "Christina Perri - A Thousand Years (Lyrics).mp3" },
+    { id: "E", title: "19. Arms", artist: "Christina Perri", src: "Arms - Christina Perri (Lyrics).mp3" },
+    { id: "E", title: "20. Landslide", artist: "Fleetwood Mac", src: "Landslide (2018 Remaster) [ ezmp3.co ].mp3" },
+    { id: "E", title: "21. Right here waiting", artist: "Richard Marx", src: "Right Here Waiting - Richard Marx (Lyrics) [ ezmp3.co ].mp3" },
+    { id: "E", title: "22. Waiting for you", artist: "Jo Hyun Ah", src: "Waiting for You (Waiting for You) [ ezmp3.co ].mp3" },
+    { id: "E", title: "23. Sad heart", artist: "Seo Young", src: "SE O (Im Seo Young) – Sad Heart (아련한 마음) Reunited Worlds OST [ ezmp3.cc ].mp3" },
+    { id: "E", title: "24. Little by little", artist: "Cheeze", src: "CHEEZE (치즈) - Little By Little (너라서 고마워) It's Okay To Not Be Okay OST Part 6 Lyrics가사 [HanRomEng].mp3" },
+    { id: "E", title: "25. Lighting Up Your World", artist: "Janet Suhh", src: "[Lyrics Video] Janet Suhh(자넷서) - Lighting Up Your World.mp3" },
+    { id: "E", title: "26. Burn", artist: "Tina Arena", src: "Burn (Acoustic).mp3" },
+    { id: "E", title: "27. Shoot The Moon", artist: "Norah Jones", src: "Shoot The Moon.mp3" },
+    { id: "E", title: "28. All Good Things Come To An End", artist: "", src: "Nelly Furtado- All Good Things Come To An End with lyrics on screen.mp3" },
+    { id: "E", title: "29. Say It Right", artist: "Nelly Furtado", src: "Nelly Furtado - Say It Right [Lyrics].mp3" },
+    { id: "E", title: "30. Tried to Tell You", artist: "Brett", src: "The Weather Station - Tried to Tell You (Lyrics).mp3" },
+    { id: "E", title: "31. With Me", artist: "Sum 41", src: "Sum 41 - With Me ( LYRICS ).mp3" },
+    { id: "E", title: "32. Thunder", artist: "Boys Like Girs", src: "Boys Like Girls - Thunder (Lyrics).mp3" },
+    { id: "E", title: "33. If you're on the water", artist: "Saxaphones", src: "The Saxophones - If You're On The Water  Lyrics.mp3" },
+    { id: "E", title: "34. Beyond love", artist: "Beach house", src: "Beach House - Beyond Love (lyrics).mp3" },
+    { id: "L", title: "35. Deep", artist: "Binocular", src: "Deep - Binocular.mp3" },
+    { id: "L", title: "36. Iris", artist: "Goo Goo Dolls", src: "Goo Goo Dolls - Iris (Lyrics).mp3" },
+    { id: "L", title: "37. Stay", artist: "Lisa Loeb", src: "Stay (I missed You) - Lisa Loeb (Lyrics).mp3" },
+    { id: "L", title: "38. November Rain", artist: "Dimas Senopati", src: "Guns N Roses - November Rain (Acoustic Cover).mp3" },
+    { id: "L", title: "39.  A girl like you", artist: "Edwyn Collins", src: "Edwyn Collins A girl like you Lyrics.mp3" },
+    { id: "L", title: "40.  Suspicious Minds", artist: "Elvis Presley", src: "Elvis Presley - Suspicious Minds (Lyrics).mp3" },
+    { id: "E", title: "41.  Hungry Heart", artist: "Bruce Springsteen", src: "Bruce SpringsteenHungry Heart lyrics.mp3" },
+    { id: "L", title: "42.  Life Is A Rock", artist: "Reunion", src: "Life Is A Rock (But The Radio Rolled Me) BEST LYRICS- Reunion 1974 (1).mp3" },
+    { id: "L", title: "43.  High", artist: "Lighthouse Family", src: "Lighthouse Family- High with lyrics.mp3" },
+    { id: "L", title: "44.  I'm Feeling You", artist: "Santana", src: "I'm Feeling You Santana-Feat  Michelle Branch Lyrics.mp3" },
+    { id: "L", title: "45.  Just Remember I Love You", artist: "Firewall", src: "Just Remember I Love You.mp3" },
+    { id: "L", title: "46.  Total Eclipse of the Heart", artist: "Bonnie", src: "Bonnie Tyler - Total Eclipse of the Heart (Long Version) [Audio].mp3" },
+    { id: "E", title: "47.  If I Sing You A Love Song", artist: "Bonnie", src: "If I Sing You A Love Song - Bonnie Tyler (Lyrics).mp3" },
+    { id: "L", title: "48.  A Groovy kind of Love", artist: "", src: "A Groovy kind of Love - Phil Collins.mp3" },
+    { id: "E", title: "49.  Just As I Am", artist: "Air supply", src: "Just As I Am (Remastered).mp3" },
+    { id: "E", title: "50.  Sometimes Love Just Ain't Enough", artist: "", src: "Sometimes Love Just Ain't Enough  Patty Smyth (Lyrics).mp3" },
+    { id: "E", title: "51.  Vulnerable", artist: "Roxette ", src: "Vulnerable Roxette (Lyrics).mp3" },
+    { id: "L", title: "52.  I Never Told You", artist: "Colbie Caillat", src: "Colbie Caillat - I Never Told You (Lyrics).mp3" },
+    { id: "E", title: "53.  Someone You Loved", artist: "Lewis Capaldi", src: "Lewis Capaldi - Someone You Loved (Lyrics).mp3" },
+    { id: "L", title: "54.   Thunder", artist: "Imagine Dragons", src: "Imagine Dragons - Thunder (Lyrics).mp3" },
+    { id: "L", title: "55.   Far away", artist: "Nickelback", src: "Nickelback - Far away lyrics (extended version).mp3" },
+    { id: "L", title: "56.   Battle", artist: "Colbie Caillat", src: "Battle - Colbie Caillat (lyrics).mp3" },
+    { id: "L", title: "57.   I'd Really Love To See You Tonight", artist: "", src: "I'd Really Love To See You Tonight - England Dan & John Ford Coley (Lyrics).mp3" },
+    { id: "L", title: "58.   Buko", artist: "Jireh Lim", src: "Buko (The Cozy Cove Live Sessions) - Jireh Lim.mp3" },
+    { id: "E", title: "59.   Magkabilang Mundo", artist: "Jireh Lim", src: "Magkabilang Mundo (The Cozy Cove Live Sessions) - Jireh Lim.mp3" },
+    { id: "E", title: "60.   NOBELA", artist: "Ehllen Quezada", src: "NOBELA  Join The Club  Cover By_  Ehllen Quezada.mp3" }
+    // New songs added below:
+    , { id: "E", title: "61.   Ang awit natin", artist: "Ehllen Quezada", src: "Ang awit natin  Janine Teñoso  Cover By_  Ehllen Quezada.mp3" },
+    { id: "E", title: "62.   241", artist: "Ehllen Quezada", src: "241 RIVERMAYA Cover By_ Ehllen Quezada (mp3cut.net).mp3" },
+    { id: "L", title: "63.   Bleeding Love", artist: "Leona Lewis", src: "Leona Lewis - Bleeding Love (Lyrics).mp3" },
+    { id: "L", title: "64.   No One", artist: "Alicia Keys", src: "Alicia Keys - No One.mp3" },
+    { id: "L", title: "65.   Just The Way You Are", artist: "", src: "Bruno Mars - Just The Way You Are (Lyrics).mp3" },
+    { id: "L", title: "66.   Songbird", artist: "Barbra Streisand", src: "Songbird (lyrics) - Barbra Streisand (1).mp3" },
+    { id: "L", title: "67.   Drive", artist: "The Cars", src: "The Cars - Drive (Lyrics).mp3" },
+    { id: "L", title: "68.   Turn Around, Look At Me", artist: "", src: "Turn Around, Look At Me.mp3" },
+    { id: "L", title: "69.   The Captain of Her Heart, Look At Me", artist: "", src: "The Captain of Her Heart (Radio Version).mp3" },
+    { id: "L", title: "70.   Insensitive", artist: "Jann Arden", src: "Jann Arden - Insensitive with Lyrics.mp3" },
+    { id: "L", title: "71.   until the end of the night", artist: "L", src: "until the end of the night.mp3" },
+    { id: "E", title: "72.   One Last Song", artist: "A1", src: "A1 - One Last Song (Lyrics)🎶 [ ezmp3.cc ].mp3" },
+    { id: "M", title: "73. Starboy", artist: "The Weeknd", src: "The Weeknd - Starboy (Lyrics) ft. Daft Punk.mp3" },
+    { id: "M", title: "74. Chained To The Rhythm", artist: "Katy Perry", src: "Katy Perry - Chained To The Rhythm (Lyrics) ft. Skip Marley.mp3" },
+    { id: "M", title: "75. On My Own", artist: "Patti LaBelle", src: "Patti LaBelle - On My Own ft. MICHAEL MCDONALD.mp3" },
+    { id: "M", title: "76. Shut Up and Dance", artist: "WALK THE MOON", src: "WALK THE MOON - Shut Up and Dance (Lyrics).mp3" },
+    { id: "M", title: "77. Need You Now", artist: "Lady Antebellum", src: "Need You Now.mp3" },
+    { id: "M", title: "78. Middle ", artist: "DJ Snake", src: "DJ Snake - Middle (Lyrics) ft. Bipolar Sunshine.mp3" },
+    { id: "M", title: "79. Gypsy ", artist: "Fleetwood Mac", src: "Gypsy.mp3" },
+    { id: "M", title: "80. Want To Want Me ", artist: "Jason Derulo", src: "(VietsubLyrics) Want To Want Me - Jason Derulo.mp3" },
+    { id: "M", title: "81. CAN'T STOP THE FEELIN ", artist: "Justin T", src: "Justin Timberlake - CAN'T STOP THE FEELING! (Lyrics).mp3" },
+    { id: "M", title: "82. Animals ", artist: "Maroon 5", src: "Maroon 5 - Animals (Lyrics).mp3" },
+    { id: "M", title: "83. I Took A Pill In Ibiza ", artist: "Mike Posner", src: "Mike Posner - I Took A Pill In Ibiza (SeeB Remix).mp3" },
+    { id: "M", title: "84. Perfect ", artist: "One Direction", src: "One Direction - Perfect (Audio).mp3" },
+    { id: "M", title: "85.  Shake It Off", artist: "Taylor Swift", src: "Shake It Off - Taylor Swift (Lyrics).mp3" },
 
 
 
 
 
-];
+
+
+    ];
+
     let currentSongIndex = 0;
     let isAutoplayEnabled = false;
     let filteredSongs = []; // Array to hold the currently filtered songs
@@ -500,8 +555,6 @@ const songs = [
 
 
 
-
-
 <style>
 .controls-container {
     position: fixed;
@@ -519,37 +572,37 @@ const songs = [
     -webkit-appearance: none;
     appearance: none;
     width: 200px;
-    height: 2px; /* base height, can adjust */
+    height: 4px; /* base height, can adjust */
   }
 
   /* WebKit browsers (Chrome, Safari, Edge) */
   #song-slider::-webkit-slider-runnable-track {
-    background: darkred; /* Track color */
-    height: 2px; /* Track height */
+    background: #4CAF50; /* Track color */
+    height: 4px; /* Track height */
     border-radius: 2px;
   }
   #song-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    height: 9px; /* Thumb size */
-    width: 8px;
-    background: red; /* Thumb color */
-    border-radius: 0;
+    height: 12px; /* Thumb size */
+    width: 12px;
+    background: #ff0000; /* Thumb color */
+    border-radius: 50%;
     cursor: pointer;
     margin-top: -4px; /* Align thumb vertically with track */
   }
 
   /* Firefox */
   #song-slider::-moz-range-track {
-    background: darkred; /* Track color */
+    background: #4CAF50; /* Track color */
     height: 4px;
     border-radius: 2px;
   }
   #song-slider::-moz-range-thumb {
     height: 12px;
     width: 12px;
-    background:  red; /* Thumb color */
-    border-radius: 0;
+    background: #ff0000; /* Thumb color */
+    border-radius: 50%;
     cursor: pointer;
   }
 
@@ -563,8 +616,8 @@ const songs = [
   #song-slider::-ms-thumb {
     height: 12px;
     width: 12px;
-    background: darkred; /* Thumb color */
-    border-radius: 0;
+    background: #ff0000; /* Thumb color */
+    border-radius: 50%;
     cursor: pointer;
   }
 
@@ -574,58 +627,54 @@ const songs = [
   -webkit-appearance: none;
   appearance: none;
   width: 200px; /* your slider width */
-  height: 2px; /* fallback height */
+  height: 4px; /* fallback height */
 }
 #volume-slider::-webkit-slider-runnable-track {
-  height: 2px; /* thinner track */
-  background: darkred; /* your track color */
+  height: 4px; /* thinner track */
+  background: #4CAF50; /* your track color */
   border-radius: 2px;
 }
 #volume-slider::-webkit-slider-thumb {
-  height: 9px; /* size of thumb */
-  width: 8px;
-  margin-top: -4px; /* to align vertically, adjust as needed */
-  background: red; /* thumb color */
-  /* remove border-radius for square shape */
-  border-radius: 0; /* or simply omit this line */
+  height: 12px; /* smaller thumb */
+  width: 12px;
+  margin-top: -4px; /* centers thumb vertically over the track */
+  background: #333; /* thumb color */
+  border-radius: 50%;
   cursor: pointer;
-  -webkit-appearance: none; /* remove default styling */
+  -webkit-appearance: none; /* remove default */
   appearance: none;
 }
 
 /* Firefox */
 #volume-slider::-moz-range-track {
-  height: 2px; /* thinner track */
-  background: darkred; /* your track color */
+  height: 4px; /* thinner track */
+  background: #4CAF50; /* your track color */
   border-radius: 2px;
 }
 #volume-slider::-moz-range-thumb {
-   height: 9px; /* size of thumb */
-  width: 8px;
-  margin-top: -4px; /* to align vertically, adjust as needed */
-  background: red; /* thumb color */
-  /* remove border-radius for square shape */
-  border-radius: 0; /* or simply omit this line */
+  height: 12px;
+  width: 12px;
+  background: #333; /* thumb color */
+  border-radius: 50%;
   cursor: pointer;
 }
 
 /* IE / Edge legacy */
 #volume-slider::-ms-track {
-  height: 2px;
+  height: 4px;
   background: transparent;
   border-color: transparent;
   color: transparent;
 }
 #volume-slider::-ms-thumb {
-  height: 9px; /* size of thumb */
-  width: 8px;
-  margin-top: -4px; /* to align vertically, adjust as needed */
-  background: darkred; /* thumb color */
-  /* remove border-radius for square shape */
-  border-radius: 0; /* or simply omit this line */
+  height: 12px;
+  width: 12px;
+  background: #333; /* thumb color */
+  border-radius: 50%;
   cursor: pointer;
 }
 </style>
+
 
 
 
@@ -643,126 +692,87 @@ const songs = [
             padding: 10px;
         }
 
- 
-
-.container {
+    .container {
     text-align: left; /* Align text to the left */
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 15px; /* Padding inside the container */
+    background: rgba(0, 0, 0, 0.5); /* 0.5 is the opacity level (50% transparent) */
+    padding: 20px; /* Padding inside the container */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
     position: fixed; /* Position the container absolutely */
-    top: 110px; /* Adjust this value to move it down */
+    top: 150px; /* Adjust this value to move it down */
     left: 20px; /* Distance from the left */
-    width: 320px; /* Set a fixed width */
-    height: 210px; /* Set a fixed height */
+    border: 2px solid black; 
+    width: 300px; /* Set a fixed width */
+    height: 190px; /* Set a fixed height */
     overflow: hidden; /* Hide overflow content */
+}
+
+
+
+
+
+
+.logo {
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    width: 85px; /* Set the width of the logo (adjust as needed) */
+    height: 60px; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below the logo */
 }
 
 .current-song h2 {
     white-space: normal; /* Allow text to wrap */
     overflow: hidden; /* Hide overflow */
     text-overflow: ellipsis; /* Add ellipsis for overflow text */
-    max-height: 2.5em; /* Limit height to 2 lines (approximately) */
-    line-height: 1.3em; /* Set line height */
+    max-height: 3em; /* Limit height to 2 lines (approximately) */
+    line-height: 1.5em; /* Set line height */
 }
 
         .controls, .navigation {
             margin: 20px 0;
         }
 
-        
+  button {
+background: linear-gradient(45deg, coral, red); /* Black to neon green gradient */
+    background-size: 350% 350%; /* Make the gradient larger for animation */
+    
 
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.2s; /* Smooth transform on hover */
+}
 
+button:hover {
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
 
-
-        button {
-            background: linear-gradient(135deg, #000000, #222);
-            color: white;
-            border: 2px solid #ff0000;
-            border-radius: 8px;
-            padding: 12px 22px;
+/* Keyframes for gradient animation */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin: 0 5px;
             cursor: pointer;
             font-size: 16px;
-            font-weight: bold;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 
-                0 0 10px rgba(255, 0, 0, 0.3),
-                0 0 20px rgba(255, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         button:hover {
-            animation: glow 1.5s infinite alternate;
-            transform: translateY(-3px);
-            box-shadow: 
-                0 0 20px rgba(255, 0, 0, 0.4),
-                0 0 30px rgba(255, 0, 0, 0.3),
-                0 0 40px rgba(255, 0, 0, 0.2);
+            background: #0056b3;
         }
-
-        button:active {
-            transform: translateY(0);
-            animation: none;
-        }
-
-        @keyframes glow {
-            0% {
-                box-shadow: 
-                    0 0 10px rgba(255, 0, 0, 0.5),
-                    0 0 20px rgba(255, 0, 0, 0.4),
-                    0 0 30px rgba(255, 0, 0, 0.3);
-                border-color: #ff0000;
-            }
-            50% {
-                box-shadow: 
-                    0 0 15px rgba(255, 0, 0, 0.6),
-                    0 0 25px rgba(255, 0, 0, 0.5),
-                    0 0 35px rgba(255, 0, 0, 0.4);
-                border-color: #ff3333;
-            }
-            100% {
-                box-shadow: 
-                    0 0 20px rgba(255, 0, 0, 0.7),
-                    0 0 30px rgba(255, 0, 0, 0.6),
-                    0 0 40px rgba(255, 0, 0, 0.5);
-                border-color: #ff6666;
-            }
-        }
-
-        button::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,0,0,0.1) 0%, rgba(255,0,0,0) 70%);
-            transform: rotate(0deg);
-            transition: all 0.5s ease;
-        }
-
-        button:hover::before {
-            transform: rotate(180deg);
-        }
-   
-
-
-.small-button {
-    padding: 8px 8px; /* Adjust padding to make buttons smaller */
-    font-size: 9px; /* Adjust font size */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Optional: add rounded corners */
-    cursor: pointer; /* Change cursor to pointer on hover */
-}
-
-    </style>
-
-
-
     </style>
 
  
@@ -772,7 +782,7 @@ const songs = [
 .filter-options {
     /* You might need to experiment with position: relative; or absolute; */
     position: fixed; /* Or absolute */
-    top: 425px; /* Adjust this value to be below the fixed jump-to-song */
+    top: 450px; /* Adjust this value to be below the fixed jump-to-song */
     left: 50px; /* Align horizontally with jump-to-song if needed */
     color: white;
     z-index: 5; /* Ensure it's below jump-to-song if needed */
@@ -787,7 +797,7 @@ const songs = [
     width: 240px; 
 }
 .jump-to-song {
-    top: 380px; /* Increase space above the dropdown to move it down */
+    top: 420px; /* Increase space above the dropdown to move it down */
     left: 50px; /* Move it to the right corner (adjust this value to move it right) */
     text-align: left; /* Align the dropdown to the left */
     z-index: 10; /* Ensure it appears above other elements */
@@ -945,14 +955,25 @@ const songs = [
             cursor: pointer;
         }
 
-  
+       /* Keyframe animation for slow bouncing effect */
+@keyframes slowBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px); /* Move up */
+    }
+    60% {
+        transform: translateY(-5px); /* Move down slightly */
+    }
+}
 
 /* Style for the image */
 .love-letter img {
     cursor: pointer; /* Change to pointer */
-    width: 105px; /* Set a width for the image */
-    height: 85px; /* Maintain aspect ratio */
-    margin-bottom: -25px; /* Adjust this value to move the image up */
+    width: 145px; /* Set a width for the image */
+    height: 95px; /* Maintain aspect ratio */
+    margin-bottom: -35px; /* Adjust this value to move the image up */
     animation: slowBounce 2s infinite; /* Apply the slow bounce animation */
 }
 
@@ -962,7 +983,93 @@ const songs = [
 <body>
 
 
+<style>
+        .textbox {
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Distance from the bottom of the page */
+            right: 20px; /* Distance from the right of the page */
+            width: 300px; /* Fixed width for the textbox */
+            height: 120px; /* Fixed height for the textbox */
+           
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Padding inside the textbox */
+            background-color: none; /* Background color of the textbox */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            text-align: center; /* Center text inside the textbox */
+            z-index: 1000; /* Ensure it appears above other elements */
+           
+        }
+        .poem {
+            font-size: 25px;
+            color: white;
+            margin: 20px 0;
+            transition: opacity 0.5s ease;
+        }
+        #author {
+            margin-top: 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
 
+<div class="textbox">
+    <div class="poem" id="poem"></div>
+    <div id="author"></div>
+</div>
+
+<script>
+    const poemsAA = [
+        "What if my love isn't a soft whisper of 'I love you'?",
+        "What if I just hold my tongue, letting silence speak true?",
+        "What if my love isn't buying you lavish flowers,",
+        "But singing you your favorite songs in the quiet hours?",
+        "What if my love isn't always sweet like candies,",
+        "But has the depth of dark chocolate, rich and dandy?",
+        "What if my love is the painting on the wall,",
+        "Beautiful yet a mystery to all?",
+        "What if my love is recalling little things about you?",
+        "What if my love is loving the people that you love, too?",
+        "What if my love is a quiet sigh of 'I miss you,'",
+        "What if my love is gazing at your old photos each night and thinking of you?",
+        "What if my love is a gift without strings,",
+        "Just your presence is enough, what a joy it brings?",
+        "What if my love is boundless,",
+        "What if my love is found in your happiness?",
+        "What if my love isn't the air you need when you can't breathe,",
+        "But just the cool breeze every Christmas that brings you peace?",
+        "What if my love is the one you least expect?",
+        "Would you take a moment to reflect?",
+        "What if my love is not just a pond,",
+        "But a deep ocean—",
+        "Would you dare to dive in?",
+        "And measure the depths within?",
+        "WHEN SILENCE SPEAKS TO YOU",
+         "A poem written by: Ehllen Quezada",
+
+
+    ];
+
+    let currentIndex = 0;
+
+    function showPoem() {
+        const poemElement = document.getElementById('poem');
+        poemElement.innerHTML = poemsAA[currentIndex];
+
+      
+    }
+
+    function nextPoem() {
+        currentIndex = (currentIndex + 1) % poemsAA.length;
+        showPoem();
+    }
+
+    // Show the first poem on page load
+    showPoem();
+
+    // Change the poem every 5 seconds (5000 milliseconds)
+    setInterval(nextPoem, 5000);
+</script>
 
 
 
@@ -972,7 +1079,7 @@ const songs = [
 
 
 <div class="love-letter">
-    <img src="letter.webp" alt="Love Letter" />
+    <img src="violin.png" alt="Love Letter" />
 </div>
 
 <div id="greetingModal" class="modal">
@@ -981,13 +1088,37 @@ const songs = [
 
 
 
+<h3> Hello Bright eyes, </h3>
+<h5> 06/01/2025 </h5>
+<p> I hope you are doing well, Today is July 01. July is always special to me
+Idk if you have idea why. Always take care. 
+</p> <p> Love, <br>Your Ellie </p>
+
+
+
+<h3> Dear songbird, </h3>
+<p> I hope u dont get bored with my songs.lol I added some of your songs here I hope u enjoy
+    your new page. with my love. 
+    The poem... that's my response to your song until the end of the night. 😉 </p>
+
+</p> 
 <br>
-  <h2> Hi, Master</h2>   
- <p> I hope you like the poem, Let me know what your thoughts & understanding about this.
-kindly reply to my email.🌻
- hehe </p>
+  <h2>Happy Birthday, Lexi!</h2>   <h5> 01/01/2025</h5>
+            <p>Brightest eyes in the world,</p>
+            <p>On this special day, I just want to remind you how much you are loved and cherished. You just don't know how truly amazing and inspiring you are. Muah
+May your birthday be filled with joy, laughter, and all the things that make you happy. You deserve the best today and always, I am so very proud of you at your work, You are always my ..IDOL.. Your hardwork and diligence have paid off. 
+<p> IPINAGMAMALAKI KITA! AT NG BANSA NATIN, if only our fellow filipinos have known your achievements I'm sure they will be proud and admire you as well. </p>
+<p>  Just don't forget to take care of yourself, while helping other people. I wish, there will be more filipino/ filipina like you that can make our country proud
+If only they knew who you are but.. I DO. 🥹 <p>
 
+<p> I'm sorry for my late birthday greeting, I just want to finished this website first then put my message here along with my playlist, I made this. for you.
+and the playlist that's my songs and also some songs for you, guess and pick 1 song. I have 1 special song for you.hehehe </p>
 
+            <p>Wishing you a fantastic year ahead!</p>
+            <p>With all my love mahal ko </p>
+            <p>~Ellie</p>
+
+        </p>
 
 
         
@@ -1011,275 +1142,52 @@ kindly reply to my email.🌻
     document.querySelector('.love-letter img').addEventListener('click', openModal);
 </script>
 
-<div class="icon-container">
-    <div class="icon-wrapper"><img src="quiz.png" alt="Start Quiz" class="quiz" onclick="showIntroPage()" /></div>
-    <div class="icon-wrapper"><img src="cam.png" alt="Photo Icon" class="gallery" onclick="showMessage()"></div>
-    <div class="icon-wrapper"><img src="clock.png" alt="Clock Icon" class="clock"></div>
-    <div class="icon-wrapper"> <img src="poem.png" alt="Poetry Icon" class="poetry" onclick="openPoemTable()"></div>
-
-</div>
-
-
-
-<!-- Poem Table -->
-<div id="poemTable" class="poem-table" style="display: none;">
-    <div class="table-content">
-        <span class="close" onclick="closePoemTable()" style="position: absolute; top: 2px; right: 15px; color: #aaa; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
-       <h2 id="poemTitle" style="color: #ca3c25;">THE NIGHT, I REMEMBERED WHO LIORA WAS</h2>
-<h4 style="color: #ca3c25;">Poem written by: Ehllen Quezada</h4>
-
-        <div id="poemText"></div>
-        <div class="navigation">
-            <div class="poem-prev" onclick="changePoem(-1)">Previous</div>
-            <div class="poem-next" onclick="changePoem(1)">Next</div>
-        </div>
-<div id="pageCount" style="margin-top:10px; font-weight:bold; text-align:center;"> </div>
-    </div>
-</div>
-
-<script>
-const poems = [
-    {
-        title: "THE NIGHT, I REMEMBERED WHO LIORA WAS",
-        text: [
-            "In the moonless night, with my feet cold,",
-            "Wearing flowing white satin dress—",
-            "I found myself walking an endless shore.",
-            "In mystic depths, I gently press.",
-            "An enchanting feeling— here, I never get old,",
-            "And the waves? Oh, they hum names I knew before.",
-            "",
-            "And as I move along, I see the figure of a man from afar,",
-            "His face— Oh, his face— was hidden by the shadows.",
-            "And so, I became a ghost— haunting this man,",
-            "Yet somehow, time and space keep us so far.",
-            "Then lightning strikes, thunder roars,",
-            "Across my face, a restless wind blows.",
-            "And here and there, his true nature shows—",
-            "",
-            "He is a knight!",
-            "He appears to me, in gleaming armor bright.",
-            "Standing tall— steady, silent, forged in fight.",
-            "Though his eyes— his eyes carry the land's slide’s groans—",
-            "Yet he reaches for my hands, with his battle-scarred hands.",
-            "As like hope renewing tones—",
-            "",
-            "As like comets colliding in our eyes,",
-            "And it feels like my wandering soul— finds its peace,",
-            "in the soft night breeze.",
-            "As like the waves knew my name that I'd forgotten— for so long",
-            "",
-            "And then his mouth whispers my name— 'LIORA'",
-            "And it echoes from the depths of the seas— like a timeless song.",
-            "From moonless night, to the moon’s bright aura.",
-            "He shed his armor bright.",
-            "My eyes fell upon his hundred wounds— bathed in a silver light.",
-            "",
-            "His bleeding wounds I long to heal,",
-            "to save him from the final seal.",
-            "And as I gazed upon his wounds, I saw my own—",
-            "Scars I buried for so long—",
-            "Perhaps, I still leave a mark to be shown.",
-            "But this knight I saw worn and pressed,",
-            "Will find with me his long-sought rest—",
-            "If only he would leave death’s cold crest.",
-            "",
-            "And so, I called the God of Seas,",
-            "To weave our souls in sacred keys.",
-            "And in that moment, I was finally free—",
-            "The haunting was never outside,",
-            "But within me—",
-            "Oh Liora— was me",
-            "The ghost that I chased— was me all along.",
-            ""
-        ],
-        date: "June 29, 2025"
-    },
-    {
-        title: "A POEM FOR YOU 🌻",
-        text: [
-            "As quiet as a mouse I am,",
-            "and yet I found my comfort in you,",
-            "Your love is one of a kind, and I am",
-            "so lucky I have met you.",
-            "",
-            "I am just an ordinary girl,",
-            "just thought superficial,",
-            "But you see what's inside my eyes",
-            "No one treats me like a special.",
-            "",
-            "At times, my heart dances to a different tune",
-            "You dance with me—",
-            "You know the melody of my soul",
-            "You know every beat of me.",
-            "",
-            "When I'm with you I'm not wearing my mask",
-            "I don't care being naked— nor being judged by the rest.",
-            "More and more, I was dazzled by you.",
-            "Words unspoken, I wish I could tell you everyday.",
-            "You are my unveiled compass, now I'm no longer lost—"
-        ],
-        date: "February 14, 2025"
-    }
-];
-
-let currentPoemIndex = 0;
-
-function openPoemTable() {
-    document.getElementById('poemTable').style.display = 'block'; // Show the table
-    showPoem(currentPoemIndex); // Show the first poem
-}
-
-function closePoemTable() {
-    document.getElementById('poemTable').style.display = 'none'; // Hide the table
-}
-
-function showPoem(index) {
-    const poemTitle = document.getElementById('poemTitle');
-    const poemText = document.getElementById('poemText');
     
-    poemTitle.innerHTML = poems[index].title;
-    poemText.innerHTML = poems[index].text.join('<br>'); // Join lines with line breaks
-}
-
-function changePoem(direction) {
-    const poemText = document.getElementById('poemText');
-    const currentPoem = poems[currentPoemIndex];
-
-    // Fade out current poem
-    poemText.classList.add('fade-out');
-
-    setTimeout(() => {
-        currentPoemIndex += direction; // Update the index based on direction
-        if (currentPoemIndex < 0) {
-            currentPoemIndex = 0; // Prevent going below the first poem
-        } else if (currentPoemIndex >= poems.length) {
-            currentPoemIndex = poems.length - 1; // Prevent going above the last poem
-        }
-        showPoem(currentPoemIndex); // Show the updated poem
-        poemText.classList.remove('fade-out'); // Fade in new poem
-    }, 300); // Match this timeout with the CSS transition duration
-}
-
-
-
-function showPoem(index) {
-    const poemTitle = document.getElementById('poemTitle');
-    const poemText = document.getElementById('poemText');
-    const pageCount = document.getElementById('pageCount');
-
-    poemTitle.innerHTML = poems[index].title;
-    poemText.innerHTML = poems[index].text.join('<br>');
-
-    // Automatically calculate total pages and current page
-    const totalPages = poems.length;
-    const currentPage = index + 1;
-
-    // Display the page info
-    pageCount.innerHTML = `Page ${currentPage} of ${totalPages}`;
-}
-</script>
-
-<style>
-.poem-table {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #bdf3f0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    padding: 20px;
-    width: 500px; /* Fixed width */
-    height: 580px; /* Fixed height */
-    overflow-y: auto; /* Enable vertical scrolling */
-    font-size: 17px;
-    font-style: bold;
-}
-
-.table-content {
-    text-align: left;
-    color: black; /* All text inside will be black */
-    font-family: calibri;
-}
-
-.poem-prev, .poem-next {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #ae300c;
-    color: black;
-    border: 2px solid black;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    margin: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect */
-.poem-prev:hover, .poem-next:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Active (click) effect */
-.poem-prev:active, .poem-next:active {
-    transform: scale(0.95);
-    box-shadow: inset 0 3px 5px rgba(0,0,0,0.2);
-    transition: none;
-}
-
-/* Fade-out effect */
-.fade-out {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-</style>
-
-
-
-
+<div class="icon-container">
+    <img src="quiz.png" alt="Start Quiz" class="quiz" onclick="showIntroPage()" />
+    <img src="cam.png" alt="Photo Icon" class="gallery" onclick="showMessage()">
+    <img src="poem.png" alt="Poetry Icon" class="poetry" onclick="openPoemTable()">
+</div>
 
 <style>
   .icon-container {
-    display: flex;
-    justify-content: center; /* Center the group horizontally */
-    align-items: center;     /* Center items vertically within container */
-    position: fixed;
-    bottom: 10px; 
-    left: 50%;
-    transform: translateX(-50%);
-    gap: 20px; /* consistent space between icons */
-    z-index: 10;
-  }
+            display: flex;
+            justify-content: center; /* Center the icons horizontally */
+            align-items: center; /* Center the icons vertically */
+            position: fixed; /* Fix the position to the bottom */
+            bottom: 10px; /* Distance from the bottom of the page */
+            left: 50%; /* Center the container horizontally */
+            transform: translateX(-50%); /* Adjust to center the container */
+            gap: 10px; /* Space between icons */
+            z-index: 10; /* Ensure it appears above other elements */
+        }
 
-  /* Optional: ensure all icons are aligned and sized uniformly */
-  .icon-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Set a fixed size or min/max if needed */
-  }
+        .quiz {
+    width: 60px; /* Set the width of the icons */
+    height: 50px; /* Set the height of the icons */
+    margin-top: 10px; 
+}
 
-  /* Size for each icon, adjust as needed for consistency */
-  .quiz {
-    width: 60px;
-    height: auto; /* maintain aspect ratio if needed */
-    max-height: 50px; /* optional: limit height */
-  }
 
-  .gallery {
-    width: 60px;
-    height: auto; /* maintain aspect ratio if needed */
-    max-height: 70px; /* optional: limit height */
-  }
-  .poetry {
+.quiz:hover {
+    transform: scale(1.3); /* Slightly enlarge the image on hover */
+}
+        .gallery {
+            width: 60px; /* Set the width of the icons */
+            height: 60px; /* Set the height of the icons */
+            margin-top: 15px;
+        }
+
+.gallery:hover {
+    transform: scale(1.3); /* Slightly enlarge the image on hover */
+}
+
+
+.poetry {
     width: 60px;
     height: auto; /* maintain aspect ratio if needed */
     max-height: 40px; /* optional: limit height */
+    margin-top: 8px;
 
   }
 
@@ -1288,165 +1196,15 @@ function showPoem(index) {
     transition: transform 0.2s ease;
 }
 
-  .clock {
-    width: 35px;
-    height: auto;
-    max-height: 35px;
-  }
-
-  /* Enlarge icons on hover for all */
-  .quiz:hover,
-  .gallery:hover,
-  .clock:hover {
-    transform: scale(1.3);
-    transition: transform 0.2s ease;
-  }
-
-  /* Optional: add transition for smooth scaling */
-  .icon-wrapper img {
-    transition: transform 0.2s ease;
-    display: block;
-  }
-
-
-/* For WebKit browsers */
-::-webkit-scrollbar {
-  width: 12px; /* width of the scrollbar */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: brown; /* color of the thumb (drag handle) */
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #f0f0f0; /* optional: color of the track */
-}
-
-/* For Firefox */
-* {
-  scrollbar-color: brown transparent; /* thumb color, track color */
-  scrollbar-width: thin; /* or auto, none */
-}
 </style>
 
 
 
 <script>
     function showMessage() {
-        alert("SORRY! BUT GAMES & PHOTOS ARE NOT AVAILABLE YET.");
+        alert("SORRY! BUT PHOTOS ARE NOT AVAILABLE YET.");
     }
 </script>
-
-
-<style>
-    .textbox {
-        position: fixed; /* Fixed position */
-        bottom: 20px; /* Distance from the bottom of the page */
-        right: 20px; /* Distance from the right of the page */
-        width: 300px; /* Fixed width for the textbox */
-        height: 120px; /* Fixed height for the textbox */
-        border-radius: 10px; /* Rounded corners */
-        padding: 20px; /* Padding inside the textbox */
-        background-color: none; /* Background color of the textbox */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-        text-align: center; /* Center text inside the textbox */
-        z-index: 1000; /* Ensure it appears above other elements */
-    }
-    .Master {
-        font-size: 22px;
-        font-family: calibri;
-        color: beige;
-        margin: 20px 0;
-        transition: opacity 0.5s ease;
-    }
-    #author {
-        margin-top: 30px;
-        font-size: 20px;
-    }
-</style>
-
-<div class="textbox">
-    <div class="Master" id="poemLine"></div>
-    <div id="author"></div>
-</div>
-
-<script>
-    // Array of poem lines
-    const poemLines = [
-        "In the moonless night, with my feet cold,",
-        "Wearing flowing white satin dress—",
-        "I found myself walking an endless shore.",
-        "In mystic depths, I gently press.",
-        "An enchanting feeling— here, I never get old,",
-        "And the waves? Oh, they hum names I knew before.",
-        "And as I move along, I see the figure of a man from afar,",
-        "His face— Oh, his face— was hidden by the shadows.",
-        "And so, I became a ghost— haunting this man,",
-        "Yet somehow, time and space keep us so far.",
-        "Then lightning strikes, thunder roars,",
-        "Across my face, a restless wind blows.",
-        "And here and there, his true nature shows—",
-        "He is a knight!",
-        "He appears to me, in gleaming armor bright.",
-        "Standing tall— steady, silent, forged in fight.",
-        "Though his eyes— his eyes carry the land's slide’s groans—",
-        "Yet he reaches for my hands, with his battle-scarred hands.",
-        "As like hope renewing tones—",
-        "As like comets colliding in our eyes,",
-        "And it feels like my wandering soul— finds its peace,",
-        "in the soft night breeze.",
-        "As like the waves knew my name that I'd forgotten— for so long",
-        "And then his mouth whispers my name— 'LIORA'",
-        "And it echoes from the depths of the seas— like a timeless song.",
-        "From moonless night, to the moon’s bright aura.",
-        "He shed his armor bright.",
-        "My eyes fell upon his hundred wounds— bathed in a silver light.",
-        "His bleeding wounds I long to heal,",
-        "to save him from the final seal.",
-        "And as I gazed upon his wounds, I saw my own—",
-        "Scars I buried for so long—",
-        "Perhaps, I still leave a mark to be shown.",
-        "But this knight I saw worn and pressed,",
-        "Will find with me his long-sought rest—",
-        "If only he would leave death’s cold crest.",
-        "And so, I called the God of Seas,",
-        "To weave our souls in sacred keys.",
-        "And in that moment, I was finally free—",
-        "The haunting was never outside,",
-        "But within me—",
-        "Oh Liora— was me",
-        "The ghost that I chased— was me all along.",
-        "The night, I remembered who Liora was",
-        "A poem written by: Ehllen Quezada",
-        "Finished date: 06/29/2025",
-    ];
-
-    let currentLineIndex = 0;
-
-    function displayLine() {
-        const lineElement = document.getElementById('poemLine');
-        lineElement.innerHTML = poemLines[currentLineIndex];
-    }
-
-    function advanceLine() {
-        currentLineIndex++;
-        if (currentLineIndex >= poemLines.length) {
-            // Restart from the beginning or stop
-            currentLineIndex = 0;
-        }
-        displayLine();
-    }
-
-    // Show the first line initially
-    displayLine();
-
-    // Change the line every 5 seconds
-    setInterval(advanceLine, 5000);
-</script>
-
-
-
 
 <!-- Intro Page -->
 <div id="introPage" style="
@@ -1526,29 +1284,10 @@ function showPoem(index) {
   <h3 style="font-size: 22px; margin-bottom: 10px;">🎉 Test Results</h3>
   <p id="resultText" style="margin-bottom: 20px;"></p>
 
-  <div style="display: flex; justify-content: center; gap: 10px;">
-    <div onclick="closeResult()" style="
-      cursor: pointer;
-      padding: 10px 20px;
-      background-color: #888;
-      color: white;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-    " onmouseover="this.style.backgroundColor='#aaa'" onmouseout="this.style.backgroundColor='#888'">
-      Close
-    </div>
-
-    <div onclick="resetQuiz()" style="
-      cursor: pointer;
-      padding: 10px 20px;
-      background-color: #f44336;
-      color: white;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-    " onmouseover="this.style.backgroundColor='#e53935'" onmouseout="this.style.backgroundColor='#f44336'">
-      Reset
-    </div>
-  </div>
+<!-- Wrap the outside result buttons -->
+<div id="outsideResultButtons" style="display: none; position: fixed; top: 10px; left: 20px; z-index: 100;">
+  <div onclick="closeResult()" style="cursor:pointer; padding:10px; background-color:#ccc; border-radius:5px;">Close</div>
+  <div onclick="resetQuiz()" style="cursor:pointer; padding:10px; background-color:#f44336; color:white; border-radius:5px; margin-top:5px;">Reset</div>
 </div>
 
 
@@ -1683,6 +1422,169 @@ function showPoem(index) {
 }
 
 </script>
+
+
+
+<style>
+.poem-table {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #bdf3f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 20px;
+    width: 500px; /* Fixed width */
+    height: 580px; /* Fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    font-size: 17px;
+    font-style: bold;
+}
+
+.table-content {
+    text-align: left;
+    color: black; /* All text inside will be black */
+    font-family: calibri;
+}
+
+.poem-prev, .poem-next {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ae300c;
+    color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.poem-prev:hover, .poem-next:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Active (click) effect */
+.poem-prev:active, .poem-next:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,0.2);
+    transition: none;
+}
+
+/* Fade-out effect */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+</style>
+
+
+<!-- Poem Table -->
+<div id="poemTable" class="poem-table" style="display: none;">
+    <div class="table-content">
+        <span class="close" onclick="closePoemTable()" style="position: absolute; top: 2px; right: 15px; color: #aaa; font-size: 40px; font-weight: bold; cursor: pointer;">×</span>
+        <h2 id="poemTitle" style="color: #ca3c25;">THE NIGHT, I REMEMBERED WHO LIORA WAS</h2>
+        <h4 style="color: #ca3c25;">Poem written by: Ehllen Quezada</h4>
+        <div id="poemText"></div>
+        <div class="navigation">
+            <div class="poem-prev" onclick="changePoem(-1)">Previous</div>
+            <div class="poem-next" onclick="changePoem(1)">Next</div>
+        </div>
+        <div id="pageCount" style="margin-top:10px; font-weight:bold; text-align:center;"> </div>
+    </div>
+</div>
+
+<script>
+
+
+// Your poem array now named EhllenPoem
+const EhllenPoem = [
+    {
+        title: "WHEN SILENCE SPEAKS TO YOU",
+        text: [
+            "What if my love isn't a soft whisper of 'I love you'?",
+            "What if I just hold my tongue, letting silence speak true?",
+            "What if my love isn't buying you lavish flowers,",
+            "But singing you your favorite songs in the quiet hours?",
+            "",
+            "What if my love isn't always sweet like candies,",
+            "But has the depth of dark chocolate, rich and dandy?",
+            "What if my love is the painting on the wall,",
+            "Beautiful yet a mystery to all?",
+            "",
+            "What if my love is recalling little things about you?",
+            "What if my love is loving the people that you love, too?",
+            "What if my love is a quiet sigh of 'I miss you,'",
+            "What if my love is gazing at your old photos each night and thinking of you?",
+            "",
+            "What if my love is a gift without strings,",
+            "Just your presence is enough, what a joy it brings?",
+            "What if my love is boundless,",
+            "What if my love is found in your happiness?",
+            "",
+            "What if my love isn't the air you need when you can't breathe,",
+            "But just the cool breeze every Christmas that brings you peace?",
+            "What if my love is the one you least expect?",
+            "Would you take a moment to reflect?",
+            "",
+            "What if my love is not just a pond,",
+            "But a deep ocean—",
+            "Would you dare to dive in?",
+            "And measure the depths within?",
+        ],
+    }
+    // You can add more poems here if needed
+];
+
+// Replace 'poemsMisty' with 'EhllenPoem'
+let currentEhllenPoemIndex = 0;
+
+function openPoemTable() {
+    document.getElementById('poemTable').style.display = 'block'; // Show the table
+    showEhllenPoem(currentEhllenPoemIndex); // Show the first poem
+}
+
+function closePoemTable() {
+    document.getElementById('poemTable').style.display = 'none'; // Hide the table
+}
+
+// Show the current poem based on index
+function showEhllenPoem(index) {
+    const poemTitle = document.getElementById('poemTitle');
+    const poemText = document.getElementById('poemText');
+    const pageCount = document.getElementById('pageCount');
+
+    const currentPoem = EhllenPoem[index];
+    if (!currentPoem) return;
+
+    poemTitle.innerHTML = currentPoem.title;
+    poemText.innerHTML = currentPoem.text.join('<br>');
+
+    // Update page count info
+    const totalPages = EhllenPoem.length;
+    const currentPage = index + 1;
+    pageCount.innerHTML = `Page ${currentPage} of ${totalPages}`;
+}
+
+// Change poem index and show next/prev
+function changePoem(direction) {
+    currentEhllenPoemIndex += direction;
+    // Clamp index within valid range
+    if (currentEhllenPoemIndex < 0) currentEhllenPoemIndex = 0;
+    if (currentEhllenPoemIndex >= EhllenPoem.length) currentEhllenPoemIndex = EhllenPoem.length - 1;
+    showEhllenPoem(currentEhllenPoemIndex);
+}
+</script>
+
+
+
+
 
 
 
