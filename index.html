@@ -431,6 +431,7 @@ background-image: linear-gradient(#000000, #8B0000);
   <button onclick="pauseSong()">⏸ Pause</button>
   <button onclick="stopSong()">⏹ Stop</button>
   <button onclick="nextSong()">⏭ Next</button>
+  <button id="loop-button" onclick="toggleLoop()">🔁 Loop: OFF</button>
   <button onclick="toggleAutoplay()">🔁 Autoplay: <span id="autoplay-status">OFF</span></button>
 
 
@@ -731,6 +732,30 @@ const originalSongs = [
     image.src = defaultImage; // Set default image when the page loads
     filterSongs('e-songs'); // Automatically display the first song from E Songs
   });
+
+function toggleLoop() {
+  const audio = document.getElementById('audio-player');
+  const loopBtn = document.getElementById('loop-button');
+  audio.loop = !audio.loop; // Toggle the loop property
+  
+  // Update button text
+  if (audio.loop) {
+    loopBtn.textContent = '🔁 Loop: ON';
+  } else {
+    loopBtn.textContent = '🔁 Loop: OFF';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // existing code...
+  const loopBtn = document.getElementById('loop-button');
+  // Set initial state
+  loopBtn.textContent = '🔁 Loop: ' + (audioPlayer.loop ? 'ON' : 'OFF');
+});
+
+
+
+  
 </script>
 
 
@@ -1155,6 +1180,7 @@ function formatTime(seconds) {
 
 </body>
 </html>
+
 
 
 
